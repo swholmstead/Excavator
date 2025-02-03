@@ -4,17 +4,27 @@
 
 ControllerPtr myController;
 
-#define steeringServoPin 32
+#define clawServoPin 12
+#define auxServoPin 13
 
-#define frontMotor0 26   // Used for controlling the front motor movement
-#define frontMotor1 25   // Used for controlling the front motor movement
-#define rearMotor0 13    // Used for controlling the rear motor movement
-#define rearMotor1 12    // Used for controlling the rear motor movement
+#define leftMotor0 5    // Used for controlling the left motor movement
+#define leftMotor1 18   // Used for controlling the left motor movement
+#define rightMotor0 19  // Used for controlling the right motor movement
+#define rightMotor1 21  // Used for controlling the right motor movement
 
-#define bedMotor0 19     // Used for controlling bed movement
-#define bedMotor1 21     // Used for controlling bed movement
-#define lightsAttach0 16 // Used for controlling headlight control
-#define lightsAttach1 17 // Used for controlling headlight control
+#define lightsAttach0 1 // Used for controlling headlight control
+#define lightsAttach1 3 // Used for controlling headlight control
+#define cabMotor0 22    // Used for controlling bed movement
+#define cabMotor1 23    // Used for controlling bed movement
+
+#define boomMotor0 14   // Used for controlling boom movement
+#define boomMotor1 27   // Used for controlling boom movement
+#define dipperMotor0 26 // Used for controlling dipper movement
+#define dipperMotor1 25 // Used for controlling dipper movement
+#define bucketMotor0 33 // Used for controlling bucket movement
+#define bucketMotor1 32 // Used for controlling bucket movement
+#define miscMotor0 35   // Used for miscellaneous movement
+#define miscMotor1 34   // Used for miscellaneous movement
 
 #define dpadUp 1
 #define dpadDown 2
@@ -22,17 +32,19 @@ ControllerPtr myController;
 #define dpadLeft 8
 
 #define throttleDeadZone 15
-#define steeringDeadZone 30
-#define steeringInitialPosition 105
+#define clawDeadZone 30
+#define clawInitialPosition 105
+#define auxInitialPosition 90
 #define bedDeadZone 20
 
 #define wiggleCountMax 6
 
-Servo steeringServo;
+Servo clawServo;
+Servo auxServo;
 
 int lightSwitchTime = 0;
-int steeringValue = steeringInitialPosition;
-float steeringAdjustment = 1;
+int clawValue = clawInitialPosition;
+float clawAdjustment = 1;
 bool lightsOn = false;
 unsigned long lastWiggleTime = 0;
 int wiggleCount = 0;
@@ -79,8 +91,8 @@ void onDisconnectedController(ControllerPtr ctl) {
 }
 
 void processGamepad(ControllerPtr ctl) {
-  //Steering
-  processSteering(ctl->axisX());
+  //claw
+  processclaw(ctl->axisX());
   //Throttle
   processThrottle(ctl->axisY());
   //Rasing and lowering of bed
@@ -104,11 +116,11 @@ void wiggle() {
     lastWiggleTime = currentTime;
     wiggleDirection = -wiggleDirection;
     wiggleCount++;
-    moveMotor(frontMotor0, frontMotor1, wiggleDirection * 100);
-    moveMotor(rearMotor0, rearMotor1, wiggleDirection * 100);
+    moveMotor(leftMotor0, leftMotor1, wiggleDirection * 100);
+    moveMotor(rightMotor0, rightMotor1, wiggleDirection * 100);
     if (wiggleCount >= wiggleCountMax) {
-      moveMotor(frontMotor0, frontMotor1, 0);
-      moveMotor(rearMotor0, rearMotor1, 0);
+      moveMotor(leftMotor0, leftMotor1, 0);
+      moveMotor(rightMotor0, rightMotor1, 0);
       wiggleCount = 0;
       shouldWiggle = false;
       processLights(true);
@@ -118,42 +130,42 @@ void wiggle() {
 
 void processThrottle(int newValue) {
   if (abs(newValue) <= throttleDeadZone) {
-    moveMotor(frontMotor0, frontMotor1, 0);
-    moveMotor(rearMotor0, rearMotor1, 0);
+    moveMotor(leftMotor0, leftMotor1, 0);
+    moveMotor(rightMotor0, rightMotor1, 0);
   } else {
     float throttleValue = newValue / 2;
-    moveMotor(frontMotor0, frontMotor1, throttleValue);
-    moveMotor(rearMotor0, rearMotor1, throttleValue);
+    moveMotor(leftMotor0, leftMotor1, throttleValue);
+    moveMotor(rightMotor0, rightMotor1, throttleValue);
   }
 }
 
 void processbed(int newValue) {
   int bedValue = newValue / 2;
   if (bedValue > bedDeadZone) {
-    moveMotor(bedMotor0, bedMotor1, bedValue);
+    moveMotor(cabMotor0, cabMotor1, bedValue);
   } else if (bedValue < -1 * bedDeadZone) {
-    moveMotor(bedMotor0, bedMotor1, bedValue);
+    moveMotor(cabMotor0, cabMotor1, bedValue);
   } else {
-    moveMotor(bedMotor0, bedMotor1, 0);
+    moveMotor(cabMotor0, cabMotor1, 0);
   }
 }
 
-void processSteering(int newValue) {
+void processclaw(int newValue) {
   // remove dead zone
-  if (abs(newValue) < steeringDeadZone) {
+  if (abs(newValue) < clawDeadZone) {
     newValue = 0;
   }
   else if (newValue > 0) {
-    newValue -= steeringDeadZone;
+    newValue -= clawDeadZone;
   }
   else {
-    newValue += steeringDeadZone;
+    newValue += clawDeadZone;
   }
 
-  // calculate steering servo angle
-  steeringValue = (steeringInitialPosition - (newValue / 10));
-  steeringServo.write(steeringValue);
-  //Serial.printf("steering: %d\n", steeringValue);
+  // calculate claw servo angle
+  clawValue = (clawInitialPosition - (newValue / 10));
+  clawServo.write(clawValue);
+  //Serial.printf("claw: %d\n", clawValue);
 }
 
 void processLights(bool buttonValue) {
@@ -197,20 +209,29 @@ void processController() {
 
 // Arduino setup function. Runs in CPU 1
 void setup() {
-  pinMode(bedMotor0, OUTPUT);
-  pinMode(bedMotor1, OUTPUT);
+  pinMode(cabMotor0, OUTPUT);
+  pinMode(cabMotor1, OUTPUT);
   pinMode(lightsAttach0, OUTPUT);
   pinMode(lightsAttach1, OUTPUT);
   digitalWrite(lightsAttach0, LOW);
   digitalWrite(lightsAttach1, LOW);
-  pinMode(frontMotor0, OUTPUT);
-  pinMode(frontMotor1, OUTPUT);
-  pinMode(rearMotor0, OUTPUT);
-  pinMode(rearMotor1, OUTPUT);
+  pinMode(leftMotor0, OUTPUT);
+  pinMode(leftMotor1, OUTPUT);
+  pinMode(rightMotor0, OUTPUT);
+  pinMode(rightMotor1, OUTPUT);
+  pinMode(boomMotor0, OUTPUT);
+  pinMode(boomMotor1, OUTPUT);
+  pinMode(dipperMotor0, OUTPUT);
+  pinMode(dipperMotor1, OUTPUT);
+  pinMode(bucketMotor0, OUTPUT);
+  pinMode(bucketMotor1, OUTPUT);
+  pinMode(miscMotor0, OUTPUT);
+  pinMode(miscMotor1, OUTPUT);
 
-
-  steeringServo.attach(steeringServoPin);
-  steeringServo.write(steeringInitialPosition);
+  clawServo.attach(clawServoPin);
+  clawServo.write(clawInitialPosition);
+  auxServo.attach(auxServoPin);
+  auxServo.write(auxInitialPosition);
 
   Serial.begin(115200);
   //   put your setup code here, to run once:
