@@ -98,7 +98,8 @@ void onDisconnectedController(ControllerPtr ctl) {
 
 void processGamepad(ControllerPtr ctl) {
   //Throttle
-  processThrottle(ctl->axisY());
+  processLeftThrottle(ctl->axisY());
+  processRightThrottle(ctl->axisY());
   //Swinging cab
   processSwing(ctl->axisRY());
   //Lights
@@ -132,13 +133,20 @@ void wiggle() {
   }
 }
 
-void processThrottle(int newValue) {
+void processLeftThrottle(int newValue) {
   if (abs(newValue) <= throttleDeadZone) {
     moveMotor(leftMotor0, leftMotor1, 0);
-    moveMotor(rightMotor0, rightMotor1, 0);
   } else {
     float throttleValue = newValue / 2;
     moveMotor(leftMotor0, leftMotor1, throttleValue);
+  }
+}
+
+void processRightThrottle(int newValue) {
+  if (abs(newValue) <= throttleDeadZone) {
+    moveMotor(rightMotor0, rightMotor1, 0);
+  } else {
+    float throttleValue = newValue / 2;
     moveMotor(rightMotor0, rightMotor1, throttleValue);
   }
 }
