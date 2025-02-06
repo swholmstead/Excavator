@@ -7,15 +7,21 @@ ControllerPtr myController;
 #define clawServoPin 12
 #define auxServoPin 13
 
-#define leftMotor0 5    // Used for controlling the left motor movement
-#define leftMotor1 18   // Used for controlling the left motor movement
-#define rightMotor0 19  // Used for controlling the right motor movement
-#define rightMotor1 21  // Used for controlling the right motor movement
+// #define leftMotor0 5    // Used for controlling the left motor movement
+// #define leftMotor1 18   // Used for controlling the left motor movement
+// #define rightMotor0 19  // Used for controlling the right motor movement
+// #define rightMotor1 21  // Used for controlling the right motor movement
+// #define swingMotor0 22  // Used for controlling bed movement
+// #define swingMotor1 23  // Used for controlling bed movement
+#define leftMotor0 21   // Used for controlling the left motor movement
+#define leftMotor1 19   // Used for controlling the left motor movement
+#define rightMotor0 32  // Used for controlling the right motor movement
+#define rightMotor1 33  // Used for controlling the right motor movement
+#define swingMotor0 25  // Used for controlling bed movement
+#define swingMotor1 26  // Used for controlling bed movement
 
 #define lightsAttach0 1 // Used for controlling headlight control
 #define lightsAttach1 3 // Used for controlling headlight control
-#define cabMotor0 22    // Used for controlling bed movement
-#define cabMotor1 23    // Used for controlling bed movement
 
 #define boomMotor0 14   // Used for controlling boom movement
 #define boomMotor1 27   // Used for controlling boom movement
@@ -91,13 +97,11 @@ void onDisconnectedController(ControllerPtr ctl) {
 }
 
 void processGamepad(ControllerPtr ctl) {
-  //claw
-  processclaw(ctl->axisX());
   //Throttle
   processThrottle(ctl->axisY());
-  //Rasing and lowering of bed
-  processbed(ctl->axisRY());
-  //Aux
+  //Swinging cab
+  processSwing(ctl->axisRY());
+  //Lights
   processLights(ctl->thumbR() | ctl->a());
 
   processWiggle(ctl->b());
@@ -139,33 +143,15 @@ void processThrottle(int newValue) {
   }
 }
 
-void processbed(int newValue) {
+void processSwing(int newValue) {
   int bedValue = newValue / 2;
   if (bedValue > bedDeadZone) {
-    moveMotor(cabMotor0, cabMotor1, bedValue);
+    moveMotor(swingMotor0, swingMotor1, bedValue);
   } else if (bedValue < -1 * bedDeadZone) {
-    moveMotor(cabMotor0, cabMotor1, bedValue);
+    moveMotor(swingMotor0, swingMotor1, bedValue);
   } else {
-    moveMotor(cabMotor0, cabMotor1, 0);
+    moveMotor(swingMotor0, swingMotor1, 0);
   }
-}
-
-void processclaw(int newValue) {
-  // remove dead zone
-  if (abs(newValue) < clawDeadZone) {
-    newValue = 0;
-  }
-  else if (newValue > 0) {
-    newValue -= clawDeadZone;
-  }
-  else {
-    newValue += clawDeadZone;
-  }
-
-  // calculate claw servo angle
-  clawValue = (clawInitialPosition - (newValue / 10));
-  clawServo.write(clawValue);
-  //Serial.printf("claw: %d\n", clawValue);
 }
 
 void processLights(bool buttonValue) {
@@ -209,8 +195,8 @@ void processController() {
 
 // Arduino setup function. Runs in CPU 1
 void setup() {
-  pinMode(cabMotor0, OUTPUT);
-  pinMode(cabMotor1, OUTPUT);
+  pinMode(swingMotor0, OUTPUT);
+  pinMode(swingMotor1, OUTPUT);
   pinMode(lightsAttach0, OUTPUT);
   pinMode(lightsAttach1, OUTPUT);
   digitalWrite(lightsAttach0, LOW);
