@@ -89,7 +89,7 @@ void onDisconnectedController(ControllerPtr ctl) {
 
 void processGamepad(ControllerPtr ctl) {
   //Throttle
-  processLeftThrottle(ctl->axisY());
+  processLeftThrottle(ctl->brake(), ctl->l1());
   processRightThrottle(ctl->axisY());
   //Swinging cab
   processSwing(ctl->axisRY());
@@ -124,13 +124,13 @@ void wiggle() {
   }
 }
 
-void processLeftThrottle(int newValue) {
-  if (abs(newValue) <= throttleDeadZone) {
-    moveMotor(leftMotor0, leftMotor1, 0);
-  } else {
-    int throttleValue = newValue / -2;
-    moveMotor(leftMotor0, leftMotor1, throttleValue);
+void processLeftThrottle(int newValue, bool isReverse) {
+  int throttleValue = newValue / 4;
+  if (isReverse) {
+    throttleValue *= -1;
   }
+  Serial.printf("brake: %d isReverse: %d throttleValue: %d\n", newValue, isReverse, throttleValue);
+  moveMotor(leftMotor0, leftMotor1, throttleValue);
 }
 
 void processRightThrottle(int newValue) {
