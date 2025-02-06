@@ -4,44 +4,35 @@
 
 ControllerPtr myController;
 
-#define clawServoPin 12
-#define auxServoPin 13
+#define clawServoPin 13
 
-// #define leftMotor0 5    // Used for controlling the left motor movement
-// #define leftMotor1 18   // Used for controlling the left motor movement
-// #define rightMotor0 19  // Used for controlling the right motor movement
-// #define rightMotor1 21  // Used for controlling the right motor movement
-// #define swingMotor0 22  // Used for controlling bed movement
-// #define swingMotor1 23  // Used for controlling bed movement
-#define leftMotor0 19   // Used for controlling the left motor movement
-#define leftMotor1 21   // Used for controlling the left motor movement
+#define leftMotor0  19  // Used for controlling the left motor movement
+#define leftMotor1  21  // Used for controlling the left motor movement
 #define rightMotor0 33  // Used for controlling the right motor movement
 #define rightMotor1 32  // Used for controlling the right motor movement
 #define swingMotor0 25  // Used for controlling bed movement
 #define swingMotor1 26  // Used for controlling bed movement
 
-#define lightsAttach0 1 // Used for controlling headlight control
-#define lightsAttach1 3 // Used for controlling headlight control
+// #define leftMotor0  18  // Used for controlling the left motor movement
+// #define leftMotor1   4  // Used for controlling the left motor movement
+// #define rightMotor0 21  // Used for controlling the right motor movement
+// #define rightMotor1 19  // Used for controlling the right motor movement
+// #define swingMotor0 23  // Used for controlling bed movement
+// #define swingMotor1 22  // Used for controlling bed movement
 
-#define boomMotor0 14   // Used for controlling boom movement
-#define boomMotor1 27   // Used for controlling boom movement
-#define dipperMotor0 26 // Used for controlling dipper movement
-#define dipperMotor1 25 // Used for controlling dipper movement
-#define bucketMotor0 33 // Used for controlling bucket movement
-#define bucketMotor1 32 // Used for controlling bucket movement
-#define miscMotor0 35   // Used for miscellaneous movement
-#define miscMotor1 34   // Used for miscellaneous movement
+#define lightsAttach 15 // Used for controlling headlight control
 
-#define dpadUp 1
-#define dpadDown 2
-#define dpadright 4
-#define dpadLeft 8
+#define boomMotor0   25 // Used for controlling boom movement
+#define boomMotor1   26 // Used for controlling boom movement
+#define dipperMotor0 27 // Used for controlling dipper movement
+#define dipperMotor1 14 // Used for controlling dipper movement
+#define bucketMotor0 32 // Used for controlling bucket movement
+#define bucketMotor1 33 // Used for controlling bucket movement
 
 #define throttleDeadZone 15
+#define swingDeadZone 30
 #define clawDeadZone 30
 #define clawInitialPosition 105
-#define auxInitialPosition 90
-#define swingDeadZone 30
 
 #define wiggleCountMax 6
 
@@ -165,12 +156,10 @@ void processSwing(int newValue) {
 void processLights(bool buttonValue) {
   if (buttonValue && (millis() - lightSwitchTime) > 200) {
     if (lightsOn) {
-      digitalWrite(lightsAttach0, LOW);
-      digitalWrite(lightsAttach1, LOW);
+      digitalWrite(lightsAttach, LOW);
       lightsOn = false;
     } else {
-      digitalWrite(lightsAttach0, LOW);
-      digitalWrite(lightsAttach1, HIGH);
+      digitalWrite(lightsAttach, HIGH);
       lightsOn = true;
     }
 
