@@ -13,10 +13,10 @@ ControllerPtr myController;
 // #define rightMotor1 21  // Used for controlling the right motor movement
 // #define swingMotor0 22  // Used for controlling bed movement
 // #define swingMotor1 23  // Used for controlling bed movement
-#define leftMotor0 21   // Used for controlling the left motor movement
-#define leftMotor1 19   // Used for controlling the left motor movement
-#define rightMotor0 32  // Used for controlling the right motor movement
-#define rightMotor1 33  // Used for controlling the right motor movement
+#define leftMotor0 19   // Used for controlling the left motor movement
+#define leftMotor1 21   // Used for controlling the left motor movement
+#define rightMotor0 33  // Used for controlling the right motor movement
+#define rightMotor1 32  // Used for controlling the right motor movement
 #define swingMotor0 25  // Used for controlling bed movement
 #define swingMotor1 26  // Used for controlling bed movement
 
@@ -41,7 +41,7 @@ ControllerPtr myController;
 #define clawDeadZone 30
 #define clawInitialPosition 105
 #define auxInitialPosition 90
-#define bedDeadZone 20
+#define swingDeadZone 30
 
 #define wiggleCountMax 6
 
@@ -152,11 +152,12 @@ void processRightThrottle(int newValue) {
 }
 
 void processSwing(int newValue) {
-  int bedValue = newValue / 2;
-  if (bedValue > bedDeadZone) {
-    moveMotor(swingMotor0, swingMotor1, bedValue);
-  } else if (bedValue < -1 * bedDeadZone) {
-    moveMotor(swingMotor0, swingMotor1, bedValue);
+  Serial.printf("swing: %d\n", newValue);
+  int swingValue = newValue / 2;
+  if (swingValue > swingDeadZone) {
+    moveMotor(swingMotor0, swingMotor1, swingValue);
+  } else if (swingValue < -1 * swingDeadZone) {
+    moveMotor(swingMotor0, swingMotor1, swingValue);
   } else {
     moveMotor(swingMotor0, swingMotor1, 0);
   }
@@ -205,27 +206,27 @@ void processController() {
 void setup() {
   pinMode(swingMotor0, OUTPUT);
   pinMode(swingMotor1, OUTPUT);
-  pinMode(lightsAttach0, OUTPUT);
-  pinMode(lightsAttach1, OUTPUT);
-  digitalWrite(lightsAttach0, LOW);
-  digitalWrite(lightsAttach1, LOW);
+  // pinMode(lightsAttach0, OUTPUT);
+  // pinMode(lightsAttach1, OUTPUT);
+  // digitalWrite(lightsAttach0, LOW);
+  // digitalWrite(lightsAttach1, LOW);
   pinMode(leftMotor0, OUTPUT);
   pinMode(leftMotor1, OUTPUT);
   pinMode(rightMotor0, OUTPUT);
   pinMode(rightMotor1, OUTPUT);
-  pinMode(boomMotor0, OUTPUT);
-  pinMode(boomMotor1, OUTPUT);
-  pinMode(dipperMotor0, OUTPUT);
-  pinMode(dipperMotor1, OUTPUT);
-  pinMode(bucketMotor0, OUTPUT);
-  pinMode(bucketMotor1, OUTPUT);
-  pinMode(miscMotor0, OUTPUT);
-  pinMode(miscMotor1, OUTPUT);
+  // pinMode(boomMotor0, OUTPUT);
+  // pinMode(boomMotor1, OUTPUT);
+  // pinMode(dipperMotor0, OUTPUT);
+  // pinMode(dipperMotor1, OUTPUT);
+  // pinMode(bucketMotor0, OUTPUT);
+  // pinMode(bucketMotor1, OUTPUT);
+  // pinMode(miscMotor0, OUTPUT);
+  // pinMode(miscMotor1, OUTPUT);
 
-  clawServo.attach(clawServoPin);
-  clawServo.write(clawInitialPosition);
-  auxServo.attach(auxServoPin);
-  auxServo.write(auxInitialPosition);
+  // clawServo.attach(clawServoPin);
+  // clawServo.write(clawInitialPosition);
+  // auxServo.attach(auxServoPin);
+  // auxServo.write(auxInitialPosition);
 
   Serial.begin(115200);
   //   put your setup code here, to run once:
