@@ -137,7 +137,7 @@ void processLeftThrottle(int newValue) {
   if (abs(newValue) <= throttleDeadZone) {
     moveMotor(leftMotor0, leftMotor1, 0);
   } else {
-    float throttleValue = newValue / 2;
+    int throttleValue = newValue / -2;
     moveMotor(leftMotor0, leftMotor1, throttleValue);
   }
 }
@@ -146,13 +146,12 @@ void processRightThrottle(int newValue) {
   if (abs(newValue) <= throttleDeadZone) {
     moveMotor(rightMotor0, rightMotor1, 0);
   } else {
-    float throttleValue = newValue / 2;
+    int throttleValue = newValue / -2;
     moveMotor(rightMotor0, rightMotor1, throttleValue);
   }
 }
 
 void processSwing(int newValue) {
-  Serial.printf("swing: %d\n", newValue);
   int swingValue = newValue / 2;
   if (swingValue > swingDeadZone) {
     moveMotor(swingMotor0, swingMotor1, swingValue);
