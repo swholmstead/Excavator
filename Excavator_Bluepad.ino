@@ -90,9 +90,9 @@ void onDisconnectedController(ControllerPtr ctl) {
 void processGamepad(ControllerPtr ctl) {
   //Throttle
   processLeftThrottle(ctl->brake(), ctl->l1());
-  processRightThrottle(ctl->axisY());
+  processRightThrottle(ctl->throttle(), ctl->r1());
   //Swinging cab
-  processSwing(ctl->axisRY());
+  processSwing(ctl->axisX());
   //Lights
   processLights(ctl->thumbR() | ctl->a());
 
@@ -125,31 +125,25 @@ void wiggle() {
 }
 
 void processLeftThrottle(int newValue, bool isReverse) {
-  int throttleValue = newValue / 4;
-  if (isReverse) {
-    throttleValue *= -1;
-  }
-  Serial.printf("brake: %d isReverse: %d throttleValue: %d\n", newValue, isReverse, throttleValue);
+  int throttleValue = newValue / 4 * (isReverse ? -1 : 1);
+  // Serial.printf("brake: %d isReverse: %d throttleValue: %d\n", newValue, isReverse, throttleValue);
   moveMotor(leftMotor0, leftMotor1, throttleValue);
 }
 
-void processRightThrottle(int newValue) {
-  if (abs(newValue) <= throttleDeadZone) {
-    moveMotor(rightMotor0, rightMotor1, 0);
-  } else {
-    int throttleValue = newValue / -2;
-    moveMotor(rightMotor0, rightMotor1, throttleValue);
-  }
+void processRightThrottle(int newValue, bool isReverse) {
+  int throttleValue = newValue / 4 * (isReverse ? -1 : 1);
+  // Serial.printf("throttle: %d isReverse: %d throttleValue: %d\n", newValue, isReverse, throttleValue);
+  moveMotor(rightMotor0, rightMotor1, throttleValue);
 }
 
 void processSwing(int newValue) {
   int swingValue = newValue / 2;
-  if (swingValue > swingDeadZone) {
-    moveMotor(swingMotor0, swingMotor1, swingValue);
-  } else if (swingValue < -1 * swingDeadZone) {
-    moveMotor(swingMotor0, swingMotor1, swingValue);
+  if (swingValue < -1 * swingDeadZone) {
+    moveMotor(swingMotor1, swingMotor0, swingValue);
+  } else if (swingValue > swingDeadZone) {
+    moveMotor(swingMotor1, swingMotor0, swingValue);
   } else {
-    moveMotor(swingMotor0, swingMotor1, 0);
+    moveMotor(swingMotor1, swingMotor0, 0);
   }
 }
 
