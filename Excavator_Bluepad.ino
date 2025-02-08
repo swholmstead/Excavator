@@ -6,19 +6,12 @@ ControllerPtr myController;
 
 #define clawServoPin 13
 
-#define leftMotor0  19  // Used for controlling the left motor movement
-#define leftMotor1  21  // Used for controlling the left motor movement
-#define rightMotor0 33  // Used for controlling the right motor movement
-#define rightMotor1 32  // Used for controlling the right motor movement
-#define swingMotor0 25  // Used for controlling bed movement
-#define swingMotor1 26  // Used for controlling bed movement
-
-// #define leftMotor0  18  // Used for controlling the left motor movement
-// #define leftMotor1   4  // Used for controlling the left motor movement
-// #define rightMotor0 21  // Used for controlling the right motor movement
-// #define rightMotor1 19  // Used for controlling the right motor movement
-// #define swingMotor0 23  // Used for controlling bed movement
-// #define swingMotor1 22  // Used for controlling bed movement
+#define leftMotor0  18  // Used for controlling the left motor movement
+#define leftMotor1   4  // Used for controlling the left motor movement
+#define rightMotor0 21  // Used for controlling the right motor movement
+#define rightMotor1 19  // Used for controlling the right motor movement
+#define swingMotor0 23  // Used for controlling cab swing movement
+#define swingMotor1 22  // Used for controlling cab swing movement
 
 #define lightsAttach 15 // Used for controlling headlight control
 
