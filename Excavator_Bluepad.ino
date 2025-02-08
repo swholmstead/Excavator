@@ -181,13 +181,13 @@ void processBucket(int newValue) {
   }
 }
 
-void moveMotor(int motorPin0, int motorPin1, int velocity) {
-  if (velocity > 1) {
-    analogWrite(motorPin0, velocity);
+void moveMotor(int motorPin0, int motorPin1, int motorSpeed) {
+  if (motorSpeed > 1) {
+    analogWrite(motorPin0, motorSpeed);
     analogWrite(motorPin1, LOW);
-  } else if (velocity < -1) {
+  } else if (motorSpeed < -1) {
     analogWrite(motorPin0, LOW);
-    analogWrite(motorPin1, (-1 * velocity));
+    analogWrite(motorPin1, (-1 * motorSpeed));
   } else {
     analogWrite(motorPin0, 0);
     analogWrite(motorPin1, 0);
