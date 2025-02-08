@@ -87,7 +87,7 @@ void processGamepad(ControllerPtr ctl) {
   processSwing(ctl->axisX());
   processBoom(ctl->axisY());
   processDipper(ctl->axisRY());
-  processBucket(ctl->axisRX);
+  processBucket(ctl->axisRX());
   
   processLights(ctl->thumbR() | ctl->a());
 
@@ -155,7 +155,7 @@ void processLights(bool buttonValue) {
 }
 
 void processBoom(int newValue) {
-  int boomValue = newvalue / 2;
+  int boomValue = newValue / 2;
   if (abs(boomValue) > boomDeadZone) {
     moveMotor(boomMotor0, boomMotor1, boomValue);
   } else {
@@ -164,7 +164,7 @@ void processBoom(int newValue) {
 }
 
 void processDipper(int newValue) {
-  int dipperValue = newvalue / 2;
+  int dipperValue = newValue / 2;
   if (abs(dipperValue) > dipperDeadZone) {
     moveMotor(dipperMotor0, dipperMotor1, dipperValue);
   } else {
@@ -173,7 +173,7 @@ void processDipper(int newValue) {
 }
 
 void processBucket(int newValue) {
-  int bucketValue = newvalue / 2;
+  int bucketValue = newValue / 2;
   if (abs(bucketValue) > bucketDeadZone) {
     moveMotor(bucketMotor0, bucketMotor1, bucketValue);
   } else {
