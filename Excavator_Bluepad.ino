@@ -22,19 +22,19 @@ ControllerPtr myController;
 #define bucketMotor0 32 // Used for controlling bucket movement
 #define bucketMotor1 33 // Used for controlling bucket movement
 
-#define throttleDeadZone 15
 #define swingDeadZone 30
+#define boomDeadZone 30
+#define dipperDeadZone 30
+#define bucketDeadZone 30
 #define clawDeadZone 30
-#define clawInitialPosition 105
+#define clawInitialPosition 90
 
 #define wiggleCountMax 6
 
 Servo clawServo;
-Servo auxServo;
 
 int lightSwitchTime = 0;
 int clawValue = clawInitialPosition;
-float clawAdjustment = 1;
 bool lightsOn = false;
 unsigned long lastWiggleTime = 0;
 int wiggleCount = 0;
@@ -47,20 +47,22 @@ void onConnectedController(ControllerPtr ctl) {
   auto btAddress = properties.btaddr;
   if (myController == nullptr) {
     Serial.printf("CALLBACK: Controller is connected, ADDR=%2X:%2X:%2X:%2X:%2X:%2X\n",
-                  btAddress[0], btAddress[1], btAddress[2],btAddress[3], btAddress[4], btAddress[5]);
+                  btAddress[0], btAddress[1], btAddress[2], btAddress[3], btAddress[4], btAddress[5]);
     // Additionally, you can get certain gamepad properties like:
     // Model, VID, PID, BTAddr, flags, etc.
     Serial.printf("Controller model: %s, VID=0x%04x, PID=0x%04x\n", ctl->getModelName().c_str(), properties.vendor_id,
                   properties.product_id);
     myController = ctl;
+
+    // disable any further BT connections so multiple controllers don't control one vehicle
     BP32.enableNewBluetoothConnections(false);
+
     ctl->playDualRumble(0 /* delayedStartMs */, 250 /* durationMs */, 0x80 /* weakMagnitude */, 0x40 /* strongMagnitude */);
     shouldWiggle = true;
     processLights(true);
-  }
-  else {
+  } else {
     Serial.printf("CALLBACK: Controller connected, ADDR=%2X:%2X:%2X:%2X:%2X:%2X, but another controller already connected.\n",
-                  btAddress[0], btAddress[1], btAddress[2],btAddress[3], btAddress[4], btAddress[5]);
+                  btAddress[0], btAddress[1], btAddress[2], btAddress[3], btAddress[4], btAddress[5]);
     ctl->disconnect();
   }
 }
@@ -70,23 +72,23 @@ void onDisconnectedController(ControllerPtr ctl) {
   auto btAddress = properties.btaddr;
   if (myController == ctl) {
     Serial.printf("CALLBACK: Controller disconnected ADDR=%2X:%2X:%2X:%2X:%2X:%2X\n",
-                  btAddress[0], btAddress[1], btAddress[2],btAddress[3], btAddress[4], btAddress[5]);
+                  btAddress[0], btAddress[1], btAddress[2], btAddress[3], btAddress[4], btAddress[5]);
     myController = nullptr;
     BP32.enableNewBluetoothConnections(true);
-  }
-  else {
+  } else {
     Serial.printf("CALLBACK: Controller disconnected, ADDR=%2X:%2X:%2X:%2X:%2X:%2X, but not active controller\n",
-                  btAddress[0], btAddress[1], btAddress[2],btAddress[3], btAddress[4], btAddress[5]);
+                  btAddress[0], btAddress[1], btAddress[2], btAddress[3], btAddress[4], btAddress[5]);
   }
 }
 
 void processGamepad(ControllerPtr ctl) {
-  //Throttle
   processLeftThrottle(ctl->brake(), ctl->l1());
   processRightThrottle(ctl->throttle(), ctl->r1());
-  //Swinging cab
   processSwing(ctl->axisX());
-  //Lights
+  processBoom(ctl->axisY());
+  processDipper(ctl->axisRY());
+  processBucket(ctl->axisRX);
+  
   processLights(ctl->thumbR() | ctl->a());
 
   processWiggle(ctl->b());
@@ -99,7 +101,7 @@ void processWiggle(bool value) {
   }
 }
 
-void wiggle() {                  
+void wiggle() {
   unsigned long currentTime = millis();
   if (abs((int)(currentTime - lastWiggleTime)) >= wiggleDelay) {
     lastWiggleTime = currentTime;
@@ -131,12 +133,10 @@ void processRightThrottle(int newValue, bool isReverse) {
 
 void processSwing(int newValue) {
   int swingValue = newValue / 2;
-  if (swingValue < -1 * swingDeadZone) {
-    moveMotor(swingMotor1, swingMotor0, swingValue);
-  } else if (swingValue > swingDeadZone) {
-    moveMotor(swingMotor1, swingMotor0, swingValue);
+  if (abs(swingValue) > swingDeadZone) {
+    moveMotor(swingMotor0, swingMotor1, swingValue);
   } else {
-    moveMotor(swingMotor1, swingMotor0, 0);
+    moveMotor(swingMotor0, swingMotor1, 0);
   }
 }
 
@@ -151,6 +151,33 @@ void processLights(bool buttonValue) {
     }
 
     lightSwitchTime = millis();
+  }
+}
+
+void processBoom(int newValue) {
+  int boomValue = newvalue / 2;
+  if (abs(boomValue) > boomDeadZone) {
+    moveMotor(boomMotor0, boomMotor1, boomValue);
+  } else {
+    moveMotor(boomMotor0, boomMotor1, 0);
+  }
+}
+
+void processDipper(int newValue) {
+  int dipperValue = newvalue / 2;
+  if (abs(dipperValue) > dipperDeadZone) {
+    moveMotor(dipperMotor0, dipperMotor1, dipperValue);
+  } else {
+    moveMotor(dipperMotor0, dipperMotor1, 0);
+  }
+}
+
+void processBucket(int newValue) {
+  int bucketValue = newvalue / 2;
+  if (abs(bucketValue) > bucketDeadZone) {
+    moveMotor(bucketMotor0, bucketMotor1, bucketValue);
+  } else {
+    moveMotor(bucketMotor0, bucketMotor1, 0);
   }
 }
 
@@ -179,32 +206,32 @@ void processController() {
 
 // Arduino setup function. Runs in CPU 1
 void setup() {
-  pinMode(swingMotor0, OUTPUT);
-  pinMode(swingMotor1, OUTPUT);
-  // pinMode(lightsAttach0, OUTPUT);
-  // pinMode(lightsAttach1, OUTPUT);
-  // digitalWrite(lightsAttach0, LOW);
-  // digitalWrite(lightsAttach1, LOW);
   pinMode(leftMotor0, OUTPUT);
   pinMode(leftMotor1, OUTPUT);
   pinMode(rightMotor0, OUTPUT);
   pinMode(rightMotor1, OUTPUT);
-  // pinMode(boomMotor0, OUTPUT);
-  // pinMode(boomMotor1, OUTPUT);
-  // pinMode(dipperMotor0, OUTPUT);
-  // pinMode(dipperMotor1, OUTPUT);
-  // pinMode(bucketMotor0, OUTPUT);
-  // pinMode(bucketMotor1, OUTPUT);
+  pinMode(swingMotor0, OUTPUT);
+  pinMode(swingMotor1, OUTPUT);
+
+  pinMode(lightsAttach, OUTPUT);
+  digitalWrite(lightsAttach, LOW);
+
+  pinMode(boomMotor0, OUTPUT);
+  pinMode(boomMotor1, OUTPUT);
+  pinMode(dipperMotor0, OUTPUT);
+  pinMode(dipperMotor1, OUTPUT);
+  pinMode(bucketMotor0, OUTPUT);
+  pinMode(bucketMotor1, OUTPUT);
+  
+  // These pins are the serial port used for debugging in IDE
+  // Do NOT use unless necessary
   // pinMode(miscMotor0, OUTPUT);
   // pinMode(miscMotor1, OUTPUT);
 
-  // clawServo.attach(clawServoPin);
-  // clawServo.write(clawInitialPosition);
-  // auxServo.attach(auxServoPin);
-  // auxServo.write(auxInitialPosition);
-
+  clawServo.attach(clawServoPin);
+  clawServo.write(clawInitialPosition);
+  
   Serial.begin(115200);
-  //   put your setup code here, to run once:
   Serial.printf("Firmware: %s\n", BP32.firmwareVersion());
   const uint8_t *addr = BP32.localBdAddress();
   Serial.printf("BD Addr: %2X:%2X:%2X:%2X:%2X:%2X\n", addr[0], addr[1], addr[2], addr[3], addr[4], addr[5]);
