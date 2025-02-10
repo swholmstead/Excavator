@@ -1,26 +1,30 @@
 #include <Arduino.h>
 #include <ESP32Servo.h>  // by Kevin Harrington
-#include <Bluepad32.h>
+#include <Bluepad32.h>   // by Ricardo Quesada
 
 ControllerPtr myController;
 
-#define clawServoPin 13
+#define leftMotor0  18  // Controls the left motor movement
+#define leftMotor1   4  // Controls the left motor movement
 
-#define leftMotor0  18  // Used for controlling the left motor movement
-#define leftMotor1   4  // Used for controlling the left motor movement
-#define rightMotor0 21  // Used for controlling the right motor movement
-#define rightMotor1 19  // Used for controlling the right motor movement
-#define swingMotor0 23  // Used for controlling cab swing movement
-#define swingMotor1 22  // Used for controlling cab swing movement
+#define rightMotor0 21  // Controls the right motor movement
+#define rightMotor1 19  // Controls the right motor movement
+#define swingMotor0 23  // Controls cab swing movement
+#define swingMotor1 22  // Controls cab swing movement
 
-#define lightsAttach 15 // Used for controlling headlight control
+#define lightsAttach 15 // Controls headlight control
 
-#define boomMotor0   25 // Used for controlling boom movement
-#define boomMotor1   26 // Used for controlling boom movement
-#define dipperMotor0 27 // Used for controlling dipper movement
-#define dipperMotor1 14 // Used for controlling dipper movement
-#define bucketMotor0 32 // Used for controlling bucket movement
-#define bucketMotor1 33 // Used for controlling bucket movement
+#define boomMotor0   25 // Controls boom movement
+#define boomMotor1   26 // Controls boom movement
+#define dipperMotor0 27 // Controls dipper movement
+#define dipperMotor1 14 // Controls dipper movement
+#define bucketMotor0 32 // Controls bucket movement
+#define bucketMotor1 33 // Controls bucket movement
+
+#define clawServoPin 13 // Controls claw servo
+#define clawMotor0   16 // Controls claw rotation movement
+#define clawMotor1   17 // Controls claw rotation movement
+
 
 #define swingDeadZone 30
 #define boomDeadZone 30
@@ -28,6 +32,10 @@ ControllerPtr myController;
 #define bucketDeadZone 30
 #define clawDeadZone 30
 #define clawInitialPosition 90
+#define clawMin 0
+#define clawMax 180
+#define clawSpeed 3
+#define clawSwivelSpeed 255
 
 #define wiggleCountMax 6
 
@@ -88,6 +96,7 @@ void processGamepad(ControllerPtr ctl) {
   processBoom(ctl->axisY());
   processDipper(ctl->axisRY());
   processBucket(ctl->axisRX());
+  processClaw(ctl->dpad());
   
   processLights(ctl->thumbR() | ctl->a());
 
@@ -181,6 +190,30 @@ void processBucket(int newValue) {
   }
 }
 
+void processClaw(int newValue) {
+  if (newValue & DPAD_UP) {
+    if (clawValue < clawMax) {
+      clawValue += clawSpeed;
+      clawServo.write(clawValue);
+    }
+    else if (newValue & DPAD_DOWN) {
+      if (clawValue > clawMin) {
+        clawValue -= clawSpeed;
+        clawServo.write((clawValue));
+      }
+    }
+    if (clawValue & DPAD_LEFT) {
+      moveMotor(clawMotor0, clawMotor1, clawSpeed);
+    }
+    else if (clawValue & DPAD_RIGHT) {
+      moveMotor(clawMotor0, clawMotor1, -1 * clawSpeed);
+    }
+    else {
+      moveMotor(clawMotor0, clawMotor1, 0);
+    }
+  }
+}
+
 void moveMotor(int motorPin0, int motorPin1, int motorSpeed) {
   if (motorSpeed > 1) {
     analogWrite(motorPin0, motorSpeed);
@@ -223,10 +256,8 @@ void setup() {
   pinMode(bucketMotor0, OUTPUT);
   pinMode(bucketMotor1, OUTPUT);
   
-  // These pins are the serial port used for debugging in IDE
-  // Do NOT use unless necessary
-  // pinMode(miscMotor0, OUTPUT);
-  // pinMode(miscMotor1, OUTPUT);
+  pinMode(clawMotor0, OUTPUT);
+  pinMode(clawMotor1, OUTPUT);
 
   clawServo.attach(clawServoPin);
   clawServo.write(clawInitialPosition);
