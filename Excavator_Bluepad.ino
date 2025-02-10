@@ -4,9 +4,8 @@
 
 ControllerPtr myController;
 
-#define leftMotor0  18  // Controls the left motor movement
-#define leftMotor1   4  // Controls the left motor movement
-
+#define leftMotor0   4  // Controls the left motor movement
+#define leftMotor1  18  // Controls the left motor movement
 #define rightMotor0 21  // Controls the right motor movement
 #define rightMotor1 19  // Controls the right motor movement
 #define swingMotor0 23  // Controls cab swing movement
@@ -16,8 +15,8 @@ ControllerPtr myController;
 
 #define boomMotor0   25 // Controls boom movement
 #define boomMotor1   26 // Controls boom movement
-#define dipperMotor0 27 // Controls dipper movement
-#define dipperMotor1 14 // Controls dipper movement
+#define dipperMotor0 14 // Controls dipper movement
+#define dipperMotor1 27 // Controls dipper movement
 #define bucketMotor0 32 // Controls bucket movement
 #define bucketMotor1 33 // Controls bucket movement
 
