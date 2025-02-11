@@ -4,25 +4,25 @@
 
 ControllerPtr myController;
 
-#define leftMotor0   4  // Controls the left motor movement
-#define leftMotor1  18  // Controls the left motor movement
-#define rightMotor0 21  // Controls the right motor movement
-#define rightMotor1 19  // Controls the right motor movement
-#define swingMotor0 23  // Controls cab swing movement
-#define swingMotor1 22  // Controls cab swing movement
+#define leftMotor0    4  // Controls the left motor movement
+#define leftMotor1   27  // Controls the left motor movement
+#define rightMotor0  17  // Controls the right motor movement
+#define rightMotor1  25  // Controls the right motor movement
+#define swingMotor0  16  // Controls cab swing movement
+#define swingMotor1  26  // Controls cab swing movement
 
-#define lightsAttach 14 // Controls headlight control
+#define lightsAttach  5 // Controls headlight control
 
-#define boomMotor0   25 // Controls boom movement
-#define boomMotor1   26 // Controls boom movement
-#define dipperMotor0 13 // Controls dipper movement
-#define dipperMotor1 27 // Controls dipper movement
-#define bucketMotor0 32 // Controls bucket movement
+#define boomMotor0   19 // Controls boom movement
+#define boomMotor1   32 // Controls boom movement
+#define dipperMotor0 21 // Controls dipper movement
+#define dipperMotor1 22 // Controls dipper movement
+#define bucketMotor0 18 // Controls bucket movement
 #define bucketMotor1 33 // Controls bucket movement
 
-#define clawServoPin 15 // Controls claw servo
-#define clawMotor0   16 // Controls claw rotation movement
-#define clawMotor1   17 // Controls claw rotation movement
+#define clawServoPin 23 // Controls claw servo
+#define clawMotor0   13 // Controls claw rotation movement
+#define clawMotor1   12 // Controls claw rotation movement
 
 
 #define swingDeadZone 30
