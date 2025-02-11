@@ -11,16 +11,16 @@ ControllerPtr myController;
 #define swingMotor0 23  // Controls cab swing movement
 #define swingMotor1 22  // Controls cab swing movement
 
-#define lightsAttach 15 // Controls headlight control
+#define lightsAttach 14 // Controls headlight control
 
 #define boomMotor0   25 // Controls boom movement
 #define boomMotor1   26 // Controls boom movement
-#define dipperMotor0 14 // Controls dipper movement
+#define dipperMotor0 13 // Controls dipper movement
 #define dipperMotor1 27 // Controls dipper movement
 #define bucketMotor0 32 // Controls bucket movement
 #define bucketMotor1 33 // Controls bucket movement
 
-#define clawServoPin 13 // Controls claw servo
+#define clawServoPin 15 // Controls claw servo
 #define clawMotor0   16 // Controls claw rotation movement
 #define clawMotor1   17 // Controls claw rotation movement
 
@@ -113,7 +113,7 @@ void wiggle() {
   unsigned long currentTime = millis();
   if (abs((int)(currentTime - lastWiggleTime)) >= wiggleDelay) {
     lastWiggleTime = currentTime;
-    wiggleDirection = -wiggleDirection;
+    wiggleDirection *= -1;
     wiggleCount++;
     moveMotor(leftMotor0, leftMotor1, wiggleDirection * 100);
     moveMotor(rightMotor0, rightMotor1, wiggleDirection * 100);
@@ -129,13 +129,11 @@ void wiggle() {
 
 void processLeftThrottle(int newValue, bool isReverse) {
   int throttleValue = newValue / 4 * (isReverse ? -1 : 1);
-  // Serial.printf("brake: %d isReverse: %d throttleValue: %d\n", newValue, isReverse, throttleValue);
   moveMotor(leftMotor0, leftMotor1, throttleValue);
 }
 
 void processRightThrottle(int newValue, bool isReverse) {
   int throttleValue = newValue / 4 * (isReverse ? -1 : 1);
-  // Serial.printf("throttle: %d isReverse: %d throttleValue: %d\n", newValue, isReverse, throttleValue);
   moveMotor(rightMotor0, rightMotor1, throttleValue);
 }
 
@@ -254,7 +252,7 @@ void setup() {
   pinMode(dipperMotor1, OUTPUT);
   pinMode(bucketMotor0, OUTPUT);
   pinMode(bucketMotor1, OUTPUT);
-  
+
   pinMode(clawMotor0, OUTPUT);
   pinMode(clawMotor1, OUTPUT);
 
