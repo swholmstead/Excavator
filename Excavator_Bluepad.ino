@@ -31,8 +31,8 @@ ControllerPtr myController;
 #define bucketDeadZone 30
 #define clawDeadZone 30
 #define clawInitialPosition 90
-#define clawMin 0
-#define clawMax 180
+#define clawMin 35
+#define clawMax 115
 #define clawSpeed 3
 #define clawSwivelSpeed 255
 
@@ -138,7 +138,7 @@ void processRightThrottle(int newValue, bool isReverse) {
 }
 
 void processSwing(int newValue) {
-  int swingValue = newValue / 2;
+  int swingValue = newValue / 3;
   if (abs(swingValue) > swingDeadZone) {
     moveMotor(swingMotor0, swingMotor1, swingValue);
   } else {
@@ -193,21 +193,21 @@ void processClaw(int newValue) {
       clawValue += clawSpeed;
       clawServo.write(clawValue);
     }
-    else if (newValue & DPAD_DOWN) {
-      if (clawValue > clawMin) {
-        clawValue -= clawSpeed;
-        clawServo.write((clawValue));
-      }
+  }
+  else if (newValue & DPAD_DOWN) {
+    if (clawValue > clawMin) {
+      clawValue -= clawSpeed;
+      clawServo.write((clawValue));
     }
-    if (clawValue & DPAD_LEFT) {
-      moveMotor(clawMotor0, clawMotor1, clawSpeed);
-    }
-    else if (clawValue & DPAD_RIGHT) {
-      moveMotor(clawMotor0, clawMotor1, -1 * clawSpeed);
-    }
-    else {
-      moveMotor(clawMotor0, clawMotor1, 0);
-    }
+  }
+  if (clawValue & DPAD_LEFT) {
+    moveMotor(clawMotor0, clawMotor1, clawSpeed);
+  }
+  else if (clawValue & DPAD_RIGHT) {
+    moveMotor(clawMotor0, clawMotor1, -1 * clawSpeed);
+  }
+  else {
+    moveMotor(clawMotor0, clawMotor1, 0);
   }
 }
 
