@@ -4,25 +4,25 @@
 
 ControllerPtr myController;
 
-#define leftMotor0   4  // Controls the left motor movement
-#define leftMotor1  18  // Controls the left motor movement
-#define rightMotor0 21  // Controls the right motor movement
-#define rightMotor1 19  // Controls the right motor movement
-#define swingMotor0 23  // Controls cab swing movement
-#define swingMotor1 22  // Controls cab swing movement
+#define leftMotor0    4  // Controls the left motor movement
+#define leftMotor1   27  // Controls the left motor movement
+#define rightMotor0  17  // Controls the right motor movement
+#define rightMotor1  25  // Controls the right motor movement
+#define swingMotor0  16  // Controls cab swing movement
+#define swingMotor1  26  // Controls cab swing movement
 
-#define lightsAttach 14 // Controls headlight control
+#define lightsAttach  5 // Controls headlight control
 
-#define boomMotor0   25 // Controls boom movement
-#define boomMotor1   26 // Controls boom movement
-#define dipperMotor0 13 // Controls dipper movement
-#define dipperMotor1 27 // Controls dipper movement
-#define bucketMotor0 32 // Controls bucket movement
+#define boomMotor0   19 // Controls boom movement
+#define boomMotor1   32 // Controls boom movement
+#define dipperMotor0 21 // Controls dipper movement
+#define dipperMotor1 22 // Controls dipper movement
+#define bucketMotor0 18 // Controls bucket movement
 #define bucketMotor1 33 // Controls bucket movement
 
-#define clawServoPin 15 // Controls claw servo
-#define clawMotor0   16 // Controls claw rotation movement
-#define clawMotor1   17 // Controls claw rotation movement
+#define clawServoPin 23 // Controls claw servo
+#define clawMotor0   13 // Controls claw rotation movement
+#define clawMotor1   12 // Controls claw rotation movement
 
 
 #define swingDeadZone 30
@@ -31,8 +31,8 @@ ControllerPtr myController;
 #define bucketDeadZone 30
 #define clawDeadZone 30
 #define clawInitialPosition 90
-#define clawMin 0
-#define clawMax 180
+#define clawMin 35
+#define clawMax 115
 #define clawSpeed 3
 #define clawSwivelSpeed 255
 
@@ -138,7 +138,7 @@ void processRightThrottle(int newValue, bool isReverse) {
 }
 
 void processSwing(int newValue) {
-  int swingValue = newValue / 2;
+  int swingValue = newValue / 3;
   if (abs(swingValue) > swingDeadZone) {
     moveMotor(swingMotor0, swingMotor1, swingValue);
   } else {
@@ -193,21 +193,21 @@ void processClaw(int newValue) {
       clawValue += clawSpeed;
       clawServo.write(clawValue);
     }
-    else if (newValue & DPAD_DOWN) {
-      if (clawValue > clawMin) {
-        clawValue -= clawSpeed;
-        clawServo.write((clawValue));
-      }
+  }
+  else if (newValue & DPAD_DOWN) {
+    if (clawValue > clawMin) {
+      clawValue -= clawSpeed;
+      clawServo.write((clawValue));
     }
-    if (clawValue & DPAD_LEFT) {
-      moveMotor(clawMotor0, clawMotor1, clawSpeed);
-    }
-    else if (clawValue & DPAD_RIGHT) {
-      moveMotor(clawMotor0, clawMotor1, -1 * clawSpeed);
-    }
-    else {
-      moveMotor(clawMotor0, clawMotor1, 0);
-    }
+  }
+  if (clawValue & DPAD_LEFT) {
+    moveMotor(clawMotor0, clawMotor1, clawSpeed);
+  }
+  else if (clawValue & DPAD_RIGHT) {
+    moveMotor(clawMotor0, clawMotor1, -1 * clawSpeed);
+  }
+  else {
+    moveMotor(clawMotor0, clawMotor1, 0);
   }
 }
 
