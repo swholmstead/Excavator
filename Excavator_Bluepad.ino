@@ -30,11 +30,11 @@ ControllerPtr myController;
 #define dipperDeadZone 30
 #define bucketDeadZone 30
 #define clawDeadZone 30
-#define clawInitialPosition 90
+#define clawInitialPosition 60
 #define clawMin 35
 #define clawMax 115
-#define clawSpeed 3
-#define clawSwivelSpeed 255
+#define clawSpeed 3         // degrees to move each cycle
+#define clawSwivelSpeed 196 // out of 255 - percentage of maximum motor speed
 
 #define wiggleCountMax 6
 
@@ -189,22 +189,24 @@ void processBucket(int newValue) {
 
 void processClaw(int newValue) {
   if (newValue & DPAD_UP) {
-    if (clawValue < clawMax) {
-      clawValue += clawSpeed;
+    if (clawValue > clawMin) {
+      clawValue -= clawSpeed;
       clawServo.write(clawValue);
+      Serial.printf("claw open: %d\n", clawValue);
     }
   }
   else if (newValue & DPAD_DOWN) {
-    if (clawValue > clawMin) {
-      clawValue -= clawSpeed;
+    if (clawValue < clawMax) {
+      clawValue += clawSpeed;
       clawServo.write((clawValue));
+      Serial.printf("claw closed: %d\n", clawValue);
     }
   }
-  if (clawValue & DPAD_LEFT) {
-    moveMotor(clawMotor0, clawMotor1, clawSpeed);
+  if (newValue & DPAD_LEFT) {
+    moveMotor(clawMotor0, clawMotor1, -1 * clawSwivelSpeed);
   }
-  else if (clawValue & DPAD_RIGHT) {
-    moveMotor(clawMotor0, clawMotor1, -1 * clawSpeed);
+  else if (newValue & DPAD_RIGHT) {
+    moveMotor(clawMotor0, clawMotor1, clawSwivelSpeed);
   }
   else {
     moveMotor(clawMotor0, clawMotor1, 0);
