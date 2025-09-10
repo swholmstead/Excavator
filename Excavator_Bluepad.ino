@@ -24,17 +24,13 @@ ControllerPtr myController;
 #define clawMotor0   13 // Controls claw rotation movement
 #define clawMotor1   12 // Controls claw rotation movement
 
-
-#define swingDeadZone 30
-#define boomDeadZone 30
-#define dipperDeadZone 30
-#define bucketDeadZone 30
-#define clawDeadZone 30
+#define deadZone 30
 #define clawInitialPosition 60
 #define clawMin 35
 #define clawMax 115
 #define clawSpeed 3         // degrees to move each cycle
 #define clawSwivelSpeed 196 // out of 255 - percentage of maximum motor speed
+#define throttleMultiplier -0.4f
 
 #define wiggleCountMax 6
 
@@ -48,6 +44,10 @@ int wiggleCount = 0;
 int wiggleDirection = 1;
 long wiggleDelay = 100;
 bool shouldWiggle = false;
+bool driveMode = true;
+bool debounce = false;
+const float DEG2RAD = PI / 180.0f;
+const float RAD2DEG = 180.0f / PI;
 
 void onConnectedController(ControllerPtr ctl) {
   ControllerProperties properties = ctl->getProperties();
@@ -89,14 +89,22 @@ void onDisconnectedController(ControllerPtr ctl) {
 }
 
 void processGamepad(ControllerPtr ctl) {
-  processLeftThrottle(ctl->brake(), ctl->l1());
-  processRightThrottle(ctl->throttle(), ctl->r1());
-  processSwing(ctl->axisX());
-  processBoom(ctl->axisY());
-  processDipper(ctl->axisRY());
-  processBucket(ctl->axisRX());
-  processClaw(ctl->dpad());
-  
+  if (isDriveMode(ctl->thumbL())) {
+    // move tracks, but stop all movement on arm
+    processThrottle(ctl->axisX(), ctl->axisY());
+    processSwing(0);
+    processBoom(0);
+    processDipper(0);
+    processBucket(0);
+  } else {
+    // stop tracks, but allow arm to move
+    processThrottle(0, 0);
+    processSwing(ctl->axisX());
+    processBoom(ctl->axisY());
+    processDipper(ctl->axisRY());
+    processBucket(ctl->axisRX());
+    processClaw(ctl->dpad());
+  }
   processLights(ctl->thumbR() | ctl->a());
 
   processWiggle(ctl->b());
@@ -127,6 +135,37 @@ void wiggle() {
   }
 }
 
+bool isDriveMode(bool buttonValue) {
+  if (!debounce && buttonValue) {
+    // switch driveMode
+    driveMode = !driveMode;
+    debounce = true;
+    // Serial.printf("Switching driveMode: %s\n", driveMode ? "true" : "false");
+  }
+  else if (!buttonValue) {
+    debounce = false;
+  }
+  return driveMode;
+}
+
+void processThrottle(int newX, int newY) {
+  float angle = atan2(newY, newX) * RAD2DEG;
+  float amplitude = sqrtf(newX*newX + newY*newY);
+  // Serial.printf("angle: %f amplitude: %f ", angle, amplitude);
+
+  float rightMotorValue = ((angle >= 0 && angle <= 90) ? 1 : (angle <= -90 ? -1 : angle > 90 ? cos((180 - angle * 2) * DEG2RAD) : cos(angle * 2 * DEG2RAD))) * amplitude;
+  float leftMotorValue = (angle >= 90 ? 1 : (angle <= 0 && angle >= -90) ? -1 : angle > 0 ? cos((180 - angle * 2) * DEG2RAD) : cos(angle * 2 * DEG2RAD)) * amplitude;
+  // Serial.printf("left: %f right: %f\n", rightMotorValue, leftMotorValue);
+
+  if (amplitude <= deadZone) {
+    rightMotorValue = 0;
+    leftMotorValue = 0;
+  }
+
+  moveMotor(rightMotor0, rightMotor1, rightMotorValue * throttleMultiplier);
+  moveMotor(leftMotor0, leftMotor1, leftMotorValue * throttleMultiplier);
+}
+
 void processLeftThrottle(int newValue, bool isReverse) {
   int throttleValue = newValue / 4 * (isReverse ? -1 : 1);
   moveMotor(leftMotor0, leftMotor1, throttleValue);
@@ -139,7 +178,7 @@ void processRightThrottle(int newValue, bool isReverse) {
 
 void processSwing(int newValue) {
   int swingValue = newValue / 3;
-  if (abs(swingValue) > swingDeadZone) {
+  if (abs(swingValue) > deadZone) {
     moveMotor(swingMotor0, swingMotor1, swingValue);
   } else {
     moveMotor(swingMotor0, swingMotor1, 0);
@@ -162,7 +201,7 @@ void processLights(bool buttonValue) {
 
 void processBoom(int newValue) {
   int boomValue = newValue / 2;
-  if (abs(boomValue) > boomDeadZone) {
+  if (abs(boomValue) > deadZone) {
     moveMotor(boomMotor0, boomMotor1, boomValue);
   } else {
     moveMotor(boomMotor0, boomMotor1, 0);
@@ -171,7 +210,7 @@ void processBoom(int newValue) {
 
 void processDipper(int newValue) {
   int dipperValue = newValue / 2;
-  if (abs(dipperValue) > dipperDeadZone) {
+  if (abs(dipperValue) > deadZone) {
     moveMotor(dipperMotor0, dipperMotor1, dipperValue);
   } else {
     moveMotor(dipperMotor0, dipperMotor1, 0);
@@ -180,7 +219,7 @@ void processDipper(int newValue) {
 
 void processBucket(int newValue) {
   int bucketValue = newValue / 2;
-  if (abs(bucketValue) > bucketDeadZone) {
+  if (abs(bucketValue) > deadZone) {
     moveMotor(bucketMotor0, bucketMotor1, bucketValue);
   } else {
     moveMotor(bucketMotor0, bucketMotor1, 0);
