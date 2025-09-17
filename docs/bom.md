@@ -4,7 +4,7 @@ All of these components are common and can be found online. I have provided link
 
 * ESP32 WROOM-32 Development Board [Amazon](https://www.amazon.com/dp/B08D5ZD528) [AliExpress](https://www.aliexpress.us/item/3256805767190776.html)
     * This is available with micro USB or USB-C.  Get the one that you like.
-* N20 12V 100 RPM motors (qty 4) [Amazon](https://www.amazon.com/gp/product/B0B8DB6NC8) [AliExpress](https://www.aliexpress.us/item/3256806632632389.html)
+* N20 12V 200 RPM motors (qty 4) [Amazon](https://www.amazon.com/gp/product/B0B8DB6NC8) [AliExpress](https://www.aliexpress.us/item/3256806632632389.html)
 * N20 12V 1000 RPM 55mm motors (qty 3) [Amazon](https://www.amazon.com/dp/B0DGSZRN4X) [AliExpress](https://www.aliexpress.us/item/3256808399549453.html)
 * 12.5mm Micro Slip Ring 4 channel (qty 1) [AliExpress](https://www.aliexpress.us/item/3256805848469478.html)
 * 6mm Micro Slip Ring 4 channel (qty 1) [AliExpress](https://www.aliexpress.us/item/3256807273542039.html)
