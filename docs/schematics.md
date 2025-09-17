@@ -22,7 +22,6 @@ Solder all components on the PCB.
 so that it is high enough to operate without the batteries interfering.</b>
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3643.JPEG" alt="Soldering" width=400>
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3644.JPEG" alt="Soldering" width=400>
 
 <h3>5V Buck Converter</h3>
 Assembly the 5V buck converter. Ensure that the 5V jumper has solder and you use an exacto knife to cut the trace above the ADJ jumper.
@@ -40,8 +39,6 @@ Assembly the DRV8833 Motor Driver boards.  Ensure that J2 jumper is soldered.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/S20250310_0002.jpg" alt="DRV8833" width=600>
 
-Add DRV8833 boards and ESP32 board to PCB.  Ensure that all 3 LEDs illuminate when power is on.
+Add DRV8833 boards and ESP32 board to PCB.  Ensure that all 5 LEDs illuminate when power is on.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3646.JPEG" alt="DRV8833" width=400>
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3647.JPEG" alt="ESP32" width=400>
-
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3646.JPEG" alt="Power On" width=400>
