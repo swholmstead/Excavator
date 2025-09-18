@@ -19,10 +19,19 @@ Open MiniSkidi_Bluepad_2.0.ino file and click right arrow on top tool bar to dow
 
 <h2>Controls</h2>
 
+Controls are the same as a John Deere excavator.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/Controls.png" alt="Controls" width=600>
+
+There are 2 modes. To switch between these modes, just click in the left joystick button.
+
+<h3>Drive Mode</h3>
 * Left joystick y-axis controls speed and x-axis controls steering.
-* Right joystick y-axis controls raising/lowering bucket arm and x-axis control bucket tilt.
-* DPAD up/down controls opening/closing claw.
+
+<h3>Excavator Mode</h3>
+* Left joystick y-axis controls raising/lowering boom arm and x-axis controls cab swivel.
+* Right joystick y-axis controls raising/lowering dipper arm and x-axis control bucket tilt.
+* DPAD up/down controls opening/closing claw and left/right coontrols rotation of the claw.
 * "A" button controls lights on/off.
 * "B" button executes "wiggle" function to move motors and flash lights (if you have more than 1 vehicle, this makes it easy to identify which
 one is paired with this controller.
-* Holding L1 bumper buttons engages low speed gear (reduces speed by 25%) for fine movement control.
