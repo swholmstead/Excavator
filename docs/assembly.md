@@ -34,13 +34,22 @@ Assemble the Track Support and Lower Body.  Push the wires of the slip ring thro
 slip ring with M2.6 x 8mm screws. Make sure the lower cab can freely rotate from the track support assembly.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3706.JPEG" alt="Slip Ring" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3707.JPEG" alt="Slip Ring" width=600>
 
 Route a pair of wires to each motor.  Cut to length and solder wires to motors.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3707.JPEG" alt="Slip Ring" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3708.JPEG" alt="Slip Ring" width=600>
 
 
 <h3>Boom and Dipper Arms</h3>
+
+Push a N20 100 rpm motor into Main Boom Holder and press Pinion Gear on other side.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3709.JPEG" alt="Slip Ring" width=600>
+
+Attach Main Boom Holder to base with M2.6 x 8mm screws.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3711.JPEG" alt="Slip Ring" width=600>
 
 <h3>Bucket (Option 1)</h3>
 
