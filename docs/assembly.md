@@ -47,7 +47,7 @@ Push a N20 100 rpm motor into Main Boom Holder and press Pinion Gear on other si
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3709.JPEG" alt="Slip Ring" width=600>
 
-Attach Main Boom Holder to base with M2.6 x 8mm screws.
+Attach Main Boom Holder to base with M2.6 x 8mm screws.  Solder JST-XH connector to boom motor.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3713.JPEG" alt="Slip Ring" width=600>
 
