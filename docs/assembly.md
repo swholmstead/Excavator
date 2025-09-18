@@ -18,4 +18,4 @@ that all rollers can rotate freely.
 
 Repeat same steps for Track Support Right.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3702.JPEG" alt="Controls" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3703.JPEG" alt="Controls" width=600>
