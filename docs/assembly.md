@@ -38,3 +38,6 @@ with M2.6 x 8mm screws.
 Route a pair of wires to each motor.  Cut to length and solder wires to motors.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3707.JPEG" alt="Slip Ring" width=600>
+
+<h3>Cab Main Body</h3>
+
