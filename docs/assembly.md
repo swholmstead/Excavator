@@ -26,7 +26,15 @@ the rear with the N20 100 rpm motors.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3704.JPEG" alt="Lower Frame" width=600>
 
-Insert the 12.5mm slip ring into the base of the Lower Frame.  Cover with Slip Ring Lock and secure with M2.6 x 8mm screws.  Route a pair
-of wires to each motor.  Cut to length and solder wires to motors.
+Insert the 12.5mm slip ring into the Slip Ring Lock.  
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3705.JPEG" alt="Lower Frame Motors" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3705.JPEG" alt="Slip Ring" width=600>
+
+Assemble the Track Support and Lower Body.  Push the wires of the slip ring through from the bottom and secure the slip ring 
+with M2.6 x 8mm screws.  
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3706.JPEG" alt="Slip Ring" width=600>
+
+Route a pair of wires to each motor.  Cut to length and solder wires to motors.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3707.JPEG" alt="Slip Ring" width=600>
