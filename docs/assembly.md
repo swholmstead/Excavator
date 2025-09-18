@@ -30,8 +30,8 @@ Insert the 12.5mm slip ring into the Slip Ring Lock.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3705.JPEG" alt="Slip Ring" width=600>
 
-Assemble the Track Support and Lower Body.  Push the wires of the slip ring through from the bottom and secure the slip ring 
-with M2.6 x 8mm screws.  
+Assemble the Track Support and Lower Body.  Push the wires of the slip ring through from the bottom and secure the
+slip ring with M2.6 x 8mm screws. Make sure the lower cab can freely rotate from the track support assembly.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3706.JPEG" alt="Slip Ring" width=600>
 
@@ -39,5 +39,18 @@ Route a pair of wires to each motor.  Cut to length and solder wires to motors.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3707.JPEG" alt="Slip Ring" width=600>
 
+
+<h3>Boom and Dipper Arms</h3>
+
+<h3>Bucket (Option 1)</h3>
+
+<h3>Claw (Option 2)</h3>
+
 <h3>Cab Main Body</h3>
+
+PCB
+Step
+Chair
+Swivel and top cover
+Engine cover and exhaust pipe
 
