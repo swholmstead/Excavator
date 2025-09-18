@@ -21,7 +21,7 @@ Open MiniSkidi_Bluepad_2.0.ino file and click right arrow on top tool bar to dow
 
 Controls are the same as a John Deere excavator.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/Controls.png" alt="Controls" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/Controls.png" alt="Controls" width=800>
 
 There are 2 modes. To switch between these modes, just click in the left joystick button.
 
