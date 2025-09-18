@@ -20,3 +20,13 @@ that all rollers can rotate freely.
 Repeat same steps for Track Support Right.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3703.JPEG" alt="Controls" width=600>
+
+Attach Lower Frame between left and right track supports and secure with M2.6 x 8mm screws.  Ensure that the wire channel faces towards
+the rear with the N20 100 rpm motors.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3704.JPEG" alt="Controls" width=600>
+
+Insert the 12.5mm slip ring into the base of the Lower Frame.  Cover with Slip Ring Lock and secure with M2.6 x 8mm screws.  Route a pair
+of wires to each motor.  Cut to length and solder wires to motors.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3705.JPEG" alt="Controls" width=600>
