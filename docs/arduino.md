@@ -26,9 +26,11 @@ Controls are the same as a John Deere excavator.
 There are 2 modes. To switch between these modes, just click in the left joystick button.
 
 <h3>Drive Mode</h3>
+
 * Left joystick y-axis controls speed and x-axis controls steering.
 
 <h3>Excavator Mode</h3>
+
 * Left joystick y-axis controls raising/lowering boom arm and x-axis controls cab swivel.
 * Right joystick y-axis controls raising/lowering dipper arm and x-axis control bucket tilt.
 * DPAD up/down controls opening/closing claw and left/right coontrols rotation of the claw.
