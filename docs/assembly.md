@@ -51,6 +51,21 @@ Attach Main Boom Holder to base with M2.6 x 8mm screws.  Solder JST-XH connector
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3713.JPEG" alt="Slip Ring" width=600>
 
+Press M4 hex nut into boom shaft and both dipper shafts.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3714.JPEG" alt="Slip Ring" width=600>
+
+Insert N20 100rpm motor into each Swivel Motor and secure with Swivel Motor Lock.  Hand screw together shafts and swivel.
+
+Attach Boom to Dipper with M4 x 8mm screws.  Attach dipper and bucket motor assembly to boom and dipper with M2.6 x 6mm screws.
+
+Route wires through boom and dipper for dipper and bucket motors, then solder to wires to motors.
+
+Attach Bucket Swing Arm to dipper with M2.6 x 6mm screws.
+
+Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6mm screw.
+
+
 <h3>Bucket (Option 1)</h3>
 
 <h3>Claw (Option 2)</h3>
