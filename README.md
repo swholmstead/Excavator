@@ -1,7 +1,9 @@
 <h1>3D printed RC Excavator</h1>
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/img_3437.webp" alt="Excavator" width=300>
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/Excavator 2.jpeg" alt="Excavator" width=300>
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/Excavator.jpeg" alt="Excavator" width=300>
+<div style="display: flex; gap: 10px;">
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/img_3437.webp" alt="Excavator" width=400>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/Excavator 2.jpeg" alt="Excavator" width=400>
+</div>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/Excavator.jpeg" alt="Excavator" width=400>
 
 <h2>Table of Contents</h2>
 
