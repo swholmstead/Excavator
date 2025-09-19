@@ -103,7 +103,7 @@ void processGamepad(ControllerPtr ctl) {
     processBoom(ctl->axisY());
     processDipper(ctl->axisRY());
     processBucket(ctl->axisRX());
-    processClaw(ctl->dpad());
+    processClaw(ctl->dpad(), ctl->throttle(), ctl->brake(), ctl->r1(), ctl->l1());
   }
   processLights(ctl->thumbR() | ctl->a());
 
@@ -226,19 +226,19 @@ void processBucket(int newValue) {
   }
 }
 
-void processClaw(int newValue) {
-  if (newValue & DPAD_UP) {
+void processClaw(int newValue, int swivel_right, int swivel_left, bool claw_open, bool claw_close) {
+  if (newValue & DPAD_UP || claw_open) {
     if (clawValue > clawMin) {
       clawValue -= clawSpeed;
       clawServo.write(clawValue);
-      Serial.printf("claw open: %d\n", clawValue);
+      // Serial.printf("claw open: %d\n", clawValue);
     }
   }
-  else if (newValue & DPAD_DOWN) {
+  else if (newValue & DPAD_DOWN || claw_close) {
     if (clawValue < clawMax) {
       clawValue += clawSpeed;
       clawServo.write((clawValue));
-      Serial.printf("claw closed: %d\n", clawValue);
+      // Serial.printf("claw close: %d\n", clawValue);
     }
   }
   if (newValue & DPAD_LEFT) {
@@ -246,6 +246,12 @@ void processClaw(int newValue) {
   }
   else if (newValue & DPAD_RIGHT) {
     moveMotor(clawMotor0, clawMotor1, clawSwivelSpeed);
+  }
+  else if (swivel_right > 0 ) {
+    moveMotor(clawMotor0, clawMotor1, swivel_right/6);
+  }
+  else if (swivel_left > 0) {
+    moveMotor(clawMotor0, clawMotor1, swivel_left/-6);
   }
   else {
     moveMotor(clawMotor0, clawMotor1, 0);
