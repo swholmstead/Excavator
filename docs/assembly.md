@@ -41,15 +41,31 @@ Route a pair of wires to each motor.  Cut to length and solder wires to motors.
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3712.JPEG" alt="Slip Ring" width=600>
 
 
-<h3>Boom and Dipper Arms</h3>
-
 Push a N20 100 rpm motor into Main Boom Holder and press Pinion Gear on other side.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3709.JPEG" alt="Slip Ring" width=600>
 
-Attach Main Boom Holder to base with M2.6 x 8mm screws.  Solder JST-XH connector to boom motor.
+Attach Main Boom Holder to base with M2.6 x 8mm screws.  Solder JST-XH connector to swivel motor.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3713.JPEG" alt="Slip Ring" width=600>
+
+Route LED with LED holder through Cab.  Connect both wires to a JST-XH connector.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3717.JPEG" alt="Slip Ring" width=600>
+
+Attach circuit board to lower body with M2.6 x 6mm screws.  Solder connection for left/right motor from swivel ring and attach
+to circuit board.  Attach swivel motor to circuit board. 
+
+Attach seat and cab to lower body.  Connect cab LED to circuit board.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3718.JPEG" alt="Slip Ring" width=600>
+
+You should be able to power on, connect XBox/PS controller, and verify operation of tracks, swivel and lights.
+Remember, to operate tracks, you must be in drive mode.  To switch out of drive mode, press in on the left joystick.
+Then you will be able to operate swivel (and boom when finally connected).
+
+
+<h3>Boom and Dipper Arms</h3>
 
 Press M4 hex nut into boom shaft and both dipper shafts.
 

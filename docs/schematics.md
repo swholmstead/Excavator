@@ -21,7 +21,7 @@ Solder all components on the PCB.
 <b>NOTE: Make sure to use the power switch standoff under the toggle switch so that it will be in the right height
 so that it is high enough to operate without the batteries interfering.</b>
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3643.JPEG" alt="Soldering" width=400>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3715.JPEG" alt="Soldering" width=400>
 
 <h3>5V Buck Converter</h3>
 Assembly the 5V buck converter. Ensure that the 5V jumper has solder and you use an exacto knife to cut the trace above the ADJ jumper.
@@ -41,4 +41,4 @@ Assembly the DRV8833 Motor Driver boards.  Ensure that J2 jumper is soldered.
 
 Add DRV8833 boards and ESP32 board to PCB.  Ensure that all 5 LEDs illuminate when power is on.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3646.JPEG" alt="Power On" width=400>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3716.JPEG" alt="Power On" width=400>
