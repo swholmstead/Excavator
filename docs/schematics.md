@@ -24,17 +24,19 @@ so that it is high enough to operate without the batteries interfering.</b>
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3715.JPEG" alt="Soldering" width=600>
 
 <h3>5V Buck Converter</h3>
+
 Assembly the 5V buck converter. Ensure that the 5V jumper has solder and you use an exacto knife to cut the trace above the ADJ jumper.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/S20250310_0001.jpg" alt="Buck Converter" width=600>
 
 Assembly the PCB, batteries, fuse, and 5V buck converter.  Turn on power and ensure buck converter is generating +5V.
-When the slide switch is towards to top of the board (closest to the batteries), it is in the ON position.  Down is off.
+When the slide switch is towards to left of the board (closest to the DRV8833 sockets), it is in the ON position.
 There are labeled test points on the servo pins on the back of the board that you can use to test for +5V.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3689.JPEG" alt="Buck Converter" width=600>
 
 <h3>DRV8833 Motor Drivers</h3>
+
 Assembly the DRV8833 Motor Driver boards.  Ensure that J2 jumper is soldered.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/S20250310_0002.jpg" alt="DRV8833" width=600>
