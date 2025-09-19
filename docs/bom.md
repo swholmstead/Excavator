@@ -25,7 +25,7 @@ All of these components are common and can be found online. I have provided link
 * M2.6 x 8mm self-tapping pan head screws [Amazon](https://www.amazon.com/dp/B08QF455PJ) [AliExpress](https://www.aliexpress.us/item/3256806345826640.html)
 
 <h3>Claw Parts</h3>
-You can omit these parts using bucket option.
+You only need these parts if using the claw option.  Not required for bucket.
 
 * 6mm Micro Slip Ring 4 channel (qty 1) [AliExpress](https://www.aliexpress.us/item/3256807273542039.html)
 * 9g Micro Servo (qty 1) - available in metal or plastic.  Both work fine, but metal costs more but is more durable.
