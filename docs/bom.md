@@ -6,7 +6,7 @@ All of these components are common and can be found online. I have provided link
     * This is available with micro USB or USB-C.  Get the one that you like.
 * N20 12V 100 RPM motors (qty 4) [Amazon](https://www.amazon.com/gp/product/B0B8DB6NC8) [AliExpress](https://www.aliexpress.us/item/3256806632632389.html)
 * N20 12V 1000 RPM 55mm motors (qty 3) [Amazon](https://www.amazon.com/dp/B0DGSZRN4X) [AliExpress](https://www.aliexpress.us/item/3256808399549453.html)
-* M4 hex nut (qty 3) [Amazon](https://www.amazon.com/Toms-world-100Pcs-Stainless-Hexagon/dp/B0CMC61C9D) [AliExpress](https://www.aliexpress.us/item/3256807407546447.html)
+* M4 hex nut (qty 3) [Amazon](https://www.amazon.com/dp/B0CMC61C9D) [AliExpress](https://www.aliexpress.us/item/3256807407546447.html)
 * 12.5mm Micro Slip Ring 4 channel (qty 1) [AliExpress](https://www.aliexpress.us/item/3256805848469478.html)
 * 5V Buck Converter [Amazon](https://www.amazon.com/dp/B0DGPZ91BD) [AliExpress](https://www.aliexpress.us/item/3256807692095306.html)
 * DRV8833 H-bridge (qty 4) [Amazon](https://www.amazon.com/dp/B0DB8CX8LK) [AliExpress](https://www.aliexpress.us/item/3256806096142480.html)
@@ -27,7 +27,6 @@ All of these components are common and can be found online. I have provided link
 <h3>Claw Parts</h3>
 You only need these parts if using the claw option.  Not required for bucket.
 
-* 6mm Micro Slip Ring 4 channel (qty 1) [AliExpress](https://www.aliexpress.us/item/3256807273542039.html)
-* 9g Micro Servo (qty 1) - available in metal or plastic.  Both work fine, but metal costs more but is more durable.
-    *  SG90 (plastic) [Amazon](https://www.amazon.com/dp/B07Q6JGWNV) [AliExpress](https://www.aliexpress.us/item/3256806097043668.html)
-    *  MG90S (metal) [Amazon](https://www.amazon.com/dp/B09BV5D7MD) [AliExpress](https://www.aliexpress.us/item/3256807333354770.html)
+* 6mm or 6.5mm Micro Slip Ring 4 channel (qty 1) [AliExpress](https://www.aliexpress.us/item/3256807273542039.html)
+    * Print part 34 and 38 for the correct size of slip ring that you buy.
+* 21g Mini Metal Servo (qty 1) - these are more powerful than standard 9g servos [Amazon](https://www.amazon.com/dp/B0D5QJVRC1) [AliExpress](https://www.aliexpress.us/item/3256804867324754.html)
