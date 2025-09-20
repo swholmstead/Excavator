@@ -143,8 +143,7 @@ Replace the cover and 4 screws on the 21g servo.  Attach the single blade and sc
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3741.JPEG" alt="Servo" width=600>
 
-Position the slip ring in the center hole and attach the 21g Servo to the Claw Servo Holder with the included screws
-from the servo.
+Position the slip ring in the center hole and attach the 21g Servo to the Claw Servo Holder with M2.6 x 8mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3742.JPEG" alt="Claw" width=600>
 
@@ -153,7 +152,7 @@ Claw assembly with M2.6 x 6mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3743.JPEG" alt="Claw" width=600>
 
-Attach the Claw Attach to the Bucket Swing Arm and Bucket Push Link with M2.6 x 6mm screws.
+Connect the Claw Attach to the Bucket Swing Arm and Bucket Push Link with M2.6 x 8mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3744.JPEG" alt="Claw" width=600>
 
