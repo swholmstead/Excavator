@@ -93,7 +93,7 @@ Press M4 hex nut into boom shaft and both dipper shafts.
 Insert N20 100rpm motor into each Swivel Motor and secure with Swivel Motor Lock.  Hand screw together shafts and swivel.
 
 Attach dipper motor and bucket motor with M2.6 x 6mm screws.  Solder motor wires to motors.
-Leave buck motor wire for now.
+Leave bucket motor wire for now.
 
 Attach Bucket Swing Arm and Bucket Push Link to dipper with M2.6 x 6mm screws.
 
