@@ -32,3 +32,9 @@ You only need these parts if using the claw option.  Not required for bucket.
     * Print part 34 and 38 for the correct size of slip ring that you buy.
     * You can always buy a slip ring with more channels and just cut off the extra wires.
 * 21g Mini Metal Servo (qty 1) - these are more powerful than standard 9g servos [Amazon](https://www.amazon.com/dp/B0D5QJVRC1) [AliExpress](https://www.aliexpress.us/item/3256804867324754.html)
+
+<h3>Optional</h3>
+* JST-XH Crimp Connectors [Amazon](https://www.amazon.com/dp/B0B2R966ZY) [AliExpress](https://www.aliexpress.us/item/3256806894018733.html)
+* Clear Heat Shrink Tubing [Amazon](https://www.amazon.com/dp/B01M6YB9CB) [AliExpress](https://www.aliexpress.us/item/3256805092198563.html)
+    * I like to label my wires with a label maker and cover it with clear heat shrink tubing.
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/Heat_Shrink.jpg" alt="Wire Labels" width=400>

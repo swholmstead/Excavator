@@ -47,7 +47,8 @@ Push a N20 100 rpm motor into Main Boom Holder and press Pinion Gear on other si
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3709.JPEG" alt="Slip Ring" width=600>
 
-Attach Main Boom Holder to base with M2.6 x 8mm screws.  Solder JST-XH connector to swivel motor.
+Attach Main Boom Holder to base with M2.6 x 8mm screws.  Attach JST-XH connector to 80mm of wire and solder to
+swivel motor.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3713.JPEG" alt="Slip Ring" width=600>
 
@@ -70,11 +71,16 @@ Attach boom to dipper with M2.6 x 6mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Boom Arm" width=600>
 
-Prepare JST-XH connectors on the end of wires that are 100mm and 150mm long.
+Attach JST-XH connectors to the following length of wires:
 
-<b> Claw Option: Also prepare JST-XH connector on wire that is 200mm long.</b>
+* Boom - 100mm
+* Dipper - 100mm
+* Bucket - 150mm
+* Claw - 200mm (<b>Optional</b> - only if doing the Claw option)
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3727.JPEG" alt="Motor Wires" width=600>
+I like to label my wires.  I use a label maker and then cover it with transparent Heat Shrink Tubing.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3729.JPEG" alt="Motor Wires" width=600>
 
 Route the wires into the boom as dipper as shown.
 
