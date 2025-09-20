@@ -138,6 +138,9 @@ joints with heat shrink tubing.</b>
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3738.JPEG" alt="Servo" width=600>
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3739.JPEG" alt="Servo" width=600>
+
+Replace the cover and 4 screws on the 21g servo.  Attach the single blade and screw to the servo.  Try to get the blade to be vertical without moving servo.  Otherwise, you will need to come back and recalibrate claw after power is on.
+
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3741.JPEG" alt="Servo" width=600>
 
 Position the slip ring in the center hole and attach the 21g Servo to the Claw Servo Holder with the included screws
