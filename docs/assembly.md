@@ -123,7 +123,7 @@ Shorten wires on ONE SIDE of 6mm or 6.5mm slip to 50mm long.  We only need 3 wir
 are not in the way.  I like to use the Black, Red, and Yellow wires, since they are the closest match to the wires
 on the 21g Servo.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Slip Ring" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3736.JPEG" alt="Slip Ring" width=600>
 
 Remove the 2 small screws on the bottom of the 21g servo.  Replace the 3 wires with wires from the shortened end
 of the slip ring.  Keep the removed wires and connector.  We will solder those onto the other end of the slip ring
@@ -144,6 +144,12 @@ Attach the Claw Push Link to the Claw Arm Left with M2.6 x 6mm screw.  Attach bo
 Claw assembly with M2.6 x 6mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Claw" width=600>
+
+Attach the Claw Attach to the Bucket Swing Arm and Bucket Push Link with M2.6 x 6mm screws.
+Attach the claw assembly to the Claw Atach with M2.6 x 6mm screws.
+
+Route the servo wires through the Dipper and Boom.  Solder original wires to slip ring cables and cover with
+heat shrink tubing.  Connect Claw servo to circuit board.
 
 <h3>Cab Main Body</h3>
 
