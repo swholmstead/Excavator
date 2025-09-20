@@ -1,5 +1,7 @@
 <h2>Assembly Instructions</h2>
 
+<b>WARNING: I am still working on assembly instructions...</b>
+
 <h3>Lower Body</h3>
 
 Push both N20 100 rpm motors into Wheel Motors.
@@ -64,8 +66,18 @@ You should be able to power on, connect XBox/PS controller, and verify operation
 Remember, to operate tracks, you must be in drive mode.  To switch out of drive mode, press in on the left joystick.
 Then you will be able to operate swivel (and boom when finally connected).
 
-
 <h3>Boom and Dipper Arms</h3>
+
+Attach boom to dipper with M2.6 x 6mm screws.
+
+Prepare JST-XH connectors on the end of wires that are 100mm and 150mm long.  If doing the claw option, also 
+prepare JST-XH connector on wire that is 200mm long.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3727.JPEG" alt="Motor Wires" width=600>
+
+Route the wires into the boom as dipper as shown.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Slip Ring" width=600>
 
 Press M4 hex nut into boom shaft and both dipper shafts.
 
@@ -73,25 +85,59 @@ Press M4 hex nut into boom shaft and both dipper shafts.
 
 Insert N20 100rpm motor into each Swivel Motor and secure with Swivel Motor Lock.  Hand screw together shafts and swivel.
 
-Attach Boom to Dipper with M4 x 8mm screws.  Attach dipper and bucket motor assembly to boom and dipper with M2.6 x 6mm screws.
+Attach dipper motor and bucket motor with M2.6 x 6mm screws.  Solder motor wires to motors.
+Leave buck motor wire for now.
 
-Route wires through boom and dipper for dipper and bucket motors, then solder to wires to motors.
+Attach Bucket Swing Arm and Bucket Push Link to dipper with M2.6 x 6mm screws.
 
-Attach Bucket Swing Arm to dipper with M2.6 x 6mm screws.
-
-Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6mm screw.
-
-<h2> Work in progress... </h2>
+Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6mm screw.  Attach boom motor to cab base and boom arm.
 
 <h3>Bucket (Option 1)</h3>
 
+Attach Bucket to Bucket Swing Arm and Bucket Push Link with M2.6 x 6mm screws.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Bucket" width=600>
+
+
 <h3>Claw (Option 2)</h3>
+
+Insert Claw Gear into Gear Retention with small end of Claw Gear facing inwards.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3720.JPEG" alt="Claw Gear" width=600>
+
+Turn over and attach Claw Servo Holder with M2.6 x 6mm screws.  Ensure that gear retention ring can still rotate freely.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3721.JPEG" alt="Claw Base" width=600>
+
+Shorten wires on ONE SIDE of 6mm or 6.5mm slip to 50mm long.  We only need 3 wires.  Clip of extra wires so they
+are not in the way.  I like to use the Black, Red, and Yellow wires, since they are the closest match to the wires
+on the 21g Servo.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Slip Ring" width=600>
+
+Remove the 2 small screws on the bottom of the 21g servo.  Replace the 3 wires with wires from the shortened end
+of the slip ring.  Keep the removed wires and connector.  We will solder those onto the other end of the slip ring
+wires later.
+
+<b>NOTE: If you are uncomfortable with unsoldering the wires and replacing them on such a small circuit board,
+then just cut the wires on the servo and solder the slip ring wires outside the servo case.  Make sure to cover
+joints with heat shrink tubing.</b>
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Servo" width=600>
+
+Position the slip ring in the center hole and attach the 21g Servo to the Claw Servo Holder with the included screws
+from the servo.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Claw" width=600>
+
+Attach the Claw Push Link to the Claw Arm Left with M2.6 x 6mm screw.  Attach both left and right Claw Arms to the
+Claw assembly with M2.6 x 6mm screws.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Claw" width=600>
 
 <h3>Cab Main Body</h3>
 
-PCB
-Step
-Chair
-Swivel and top cover
-Engine cover and exhaust pipe
+* Step
+* Swivel and top cover
+* Engine cover and exhaust pipe
 
