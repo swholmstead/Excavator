@@ -103,7 +103,7 @@ Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6mm screw.  Atta
 
 Attach Bucket to Bucket Swing Arm and Bucket Push Link with M2.6 x 6mm screws.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Bucket" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3734.JPEG" alt="Bucket" width=600>
 
 
 <h3>Claw (Option 2)</h3>
