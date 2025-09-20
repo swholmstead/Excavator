@@ -134,23 +134,37 @@ wires later.
 then just cut the wires on the servo and solder the slip ring wires outside the servo case.  Make sure to cover
 joints with heat shrink tubing.</b>
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Servo" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3738.JPEG" alt="Servo" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3739.JPEG" alt="Servo" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3741.JPEG" alt="Servo" width=600>
 
 Position the slip ring in the center hole and attach the 21g Servo to the Claw Servo Holder with the included screws
 from the servo.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Claw" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3742.JPEG" alt="Claw" width=600>
 
 Attach the Claw Push Link to the Claw Arm Left with M2.6 x 6mm screw.  Attach both left and right Claw Arms to the
 Claw assembly with M2.6 x 6mm screws.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Claw" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3743.JPEG" alt="Claw" width=600>
 
 Attach the Claw Attach to the Bucket Swing Arm and Bucket Push Link with M2.6 x 6mm screws.
-Attach the claw assembly to the Claw Atach with M2.6 x 6mm screws.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3744.JPEG" alt="Claw" width=600>
+
+Insert N20 100rpm motor into Claw Attach and press Claw Motor Gear onto N20 100 rpm motor.  Solder claw motor wires.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3746.JPEG" alt="Claw" width=600>
 
 Route the servo wires through the Dipper and Boom.  Solder original wires to slip ring cables and cover with
-heat shrink tubing.  Connect Claw servo to circuit board.
+heat shrink tubing. 
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3748.JPEG" alt="Claw" width=600>
+
+Attach the claw assembly to the Claw Attach with M2.6 x 6mm screws.  Connect Claw servo to circuit board with
+yellow wire closest to the power switch.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3747.JPEG" alt="Claw" width=600>
 
 <h3>Cab Main Body</h3>
 
