@@ -82,7 +82,8 @@ I like to label my wires.  I use a label maker and then cover it with transparen
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3729.JPEG" alt="Motor Wires" width=600>
 
-Route the Dipper, Bucket, and Claw (optional) wires into the boom as dipper as shown.
+Route the Dipper, Bucket, and Claw (optional) wires into the boom as dipper as shown.  The Boom wires do not need
+to be routed through the Boom arm.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3732.JPEG" alt="Boom Wires" width=600>
 
@@ -121,7 +122,7 @@ Turn over and attach Claw Servo Holder with M2.6 x 6mm screws.  Ensure that gear
 
 Shorten wires on ONE SIDE of 6mm or 6.5mm slip to 50mm long.  I like to shorten the side where the wires are on
 the outside of the slip ring.  We only need 3 wires.  I like to use the Black, Red, and Yellow wires, since they
-are the closest match to the wires on the 21g Servo.  Clip off extra wires so they are not in the way.  
+are the closest match to the wires on the 21g Servo.  Carefully clip off extra wires so they are not in the way.  
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3736.JPEG" alt="Slip Ring" width=600>
 
