@@ -69,7 +69,7 @@ Then you will be able to operate swivel (and boom when finally connected).
 
 Attach boom to dipper with M2.6 x 6mm screws.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Boom Arm" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3731.JPEG" alt="Boom Arm" width=600>
 
 Attach JST-XH connectors to the following length of wires:
 
@@ -84,11 +84,11 @@ I like to label my wires.  I use a label maker and then cover it with transparen
 
 Route the wires into the boom as dipper as shown.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Slip Ring" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3732.JPEG" alt="Boom Wires" width=600>
 
 Press M4 hex nut into boom shaft and both dipper shafts.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3714.JPEG" alt="Slip Ring" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3714.JPEG" alt="Motor Shaft" width=600>
 
 Insert N20 100rpm motor into each Swivel Motor and secure with Swivel Motor Lock.  Hand screw together shafts and swivel.
 
