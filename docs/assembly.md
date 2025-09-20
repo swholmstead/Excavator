@@ -51,18 +51,16 @@ Attach Main Boom Holder to base with M2.6 x 8mm screws.  Solder JST-XH connector
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3713.JPEG" alt="Slip Ring" width=600>
 
-Route LED with LED holder through Cab.  Connect both wires to a JST-XH connector.
+Attach circuit board to lower body with M2.6 x 6mm screws.  Solder connection for left/right motor from swivel ring
+and attach to circuit board.  Attach swivel motor to circuit board. 
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3717.JPEG" alt="Slip Ring" width=600>
+Attach seat to lower body with M2.6 x 6mm screw.
 
-Attach circuit board to lower body with M2.6 x 6mm screws.  Solder connection for left/right motor from swivel ring and attach
-to circuit board.  Attach swivel motor to circuit board. 
+Install TPU tracks.
 
-Attach seat and cab to lower body.  Connect cab LED to circuit board.
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3728.JPEG" alt="Lower Body" width=600>
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3718.JPEG" alt="Slip Ring" width=600>
-
-You should be able to power on, connect XBox/PS controller, and verify operation of tracks, swivel and lights.
+You should be able to power on, connect XBox/PS controller, and verify operation of tracks and swivel.
 Remember, to operate tracks, you must be in drive mode.  To switch out of drive mode, press in on the left joystick.
 Then you will be able to operate swivel (and boom when finally connected).
 
@@ -140,7 +138,18 @@ Claw assembly with M2.6 x 6mm screws.
 
 <h3>Cab Main Body</h3>
 
-* Step
-* Swivel and top cover
-* Engine cover and exhaust pipe
+Route LED with LED holder through Cab.  Connect both wires to a JST-XH connector.
 
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3717.JPEG" alt="Slip Ring" width=600>
+
+Click Cab into lower body and plug lights into circuit board.
+
+Attach Step to lower body with M2.6 x 6mm screw.
+
+Attach Swivel to lower body with M2.6 x 6mm screws.  Attach Top Cover to Swivel with M2.6 x 6mm screws.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Cab and Top Cover" width=600>
+
+Attach Exhaust Pipe to Engine Cover with M2.6 x 6mm screw.  Click Engine Cover onto Top Cover.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Completed" width=600>
