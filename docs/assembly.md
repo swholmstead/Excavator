@@ -70,8 +70,11 @@ Then you will be able to operate swivel (and boom when finally connected).
 
 Attach boom to dipper with M2.6 x 6mm screws.
 
-Prepare JST-XH connectors on the end of wires that are 100mm and 150mm long.  If doing the claw option, also 
-prepare JST-XH connector on wire that is 200mm long.
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Boom Arm" width=600>
+
+Prepare JST-XH connectors on the end of wires that are 100mm and 150mm long.
+
+<b> Claw Option: Also prepare JST-XH connector on wire that is 200mm long.</b>
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3727.JPEG" alt="Motor Wires" width=600>
 
