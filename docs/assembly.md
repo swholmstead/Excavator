@@ -82,18 +82,21 @@ I like to label my wires.  I use a label maker and then cover it with transparen
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3729.JPEG" alt="Motor Wires" width=600>
 
-Route the wires into the boom as dipper as shown.
+Route the Dipper, Bucket, and Claw (optional) wires into the boom as dipper as shown.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3732.JPEG" alt="Boom Wires" width=600>
 
-Press M4 hex nut into boom shaft and both dipper shafts.
+Press M4 hex nut into boom shaft and both dipper shafts.  Make sure that they are fully seated and the center of the nut
+is in the center of shaft.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3714.JPEG" alt="Motor Shaft" width=600>
 
 Insert N20 100rpm motor into each Swivel Motor and secure with Swivel Motor Lock.  Hand screw together shafts and swivel.
 
-Attach dipper motor and bucket motor with M2.6 x 6mm screws.  Solder motor wires to motors.
-Leave bucket motor wire for now.
+Attach dipper motor and bucket motor with M2.6 x 6mm screws.  Ensure that screws are not too tight that they bind
+the motor.  I like to cut off the tip of the screw to remove the point that can cause binding.
+
+Solder motor wires to motors. Leave bucket motor wire for now.
 
 Attach Bucket Swing Arm and Bucket Push Link to dipper with M2.6 x 6mm screws.
 
@@ -101,7 +104,7 @@ Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6mm screw.  Atta
 
 <h3>Bucket (Option 1)</h3>
 
-Attach Bucket to Bucket Swing Arm and Bucket Push Link with M2.6 x 6mm screws.
+Attach Bucket to Bucket Swing Arm and Bucket Push Link with M2.6 x 6mm and M2.6 x 8mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3734.JPEG" alt="Bucket" width=600>
 
