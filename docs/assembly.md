@@ -81,6 +81,7 @@ Attach Bucket Swing Arm to dipper with M2.6 x 6mm screws.
 
 Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6mm screw.
 
+<h2> Work in progress... </h2>
 
 <h3>Bucket (Option 1)</h3>
 
