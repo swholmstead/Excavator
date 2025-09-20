@@ -126,8 +126,10 @@ are the closest match to the wires on the 21g Servo.  Carefully clip off extra w
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3736.JPEG" alt="Slip Ring" width=600>
 
-Remove the 2 small screws on the bottom of the 21g servo.  Replace the 3 wires with wires from the shortened end
-of the slip ring.  Keep the removed wires and connector.  We will solder those onto the other end of the slip ring
+Remove the 4 small screws on the bottom of the 21g servo.  Replace the 3 wires with wires from the shortened end
+of the slip ring.  Make sure that the wires are in order from left to right: yellow, red, black.
+
+Keep the removed wires and connector.  We will solder those onto the other end of the slip ring
 wires later.
 
 <b>NOTE: If you are uncomfortable with unsoldering the wires and replacing them on such a small circuit board,
