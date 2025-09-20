@@ -34,6 +34,7 @@ You only need these parts if using the claw option.  Not required for bucket.
 * 21g Mini Metal Servo (qty 1) - these are more powerful than standard 9g servos [Amazon](https://www.amazon.com/dp/B0D5QJVRC1) [AliExpress](https://www.aliexpress.us/item/3256804867324754.html)
 
 <h3>Optional</h3>
+
 * JST-XH Crimp Connectors [Amazon](https://www.amazon.com/dp/B0B2R966ZY) [AliExpress](https://www.aliexpress.us/item/3256806894018733.html)
 * Clear Heat Shrink Tubing [Amazon](https://www.amazon.com/dp/B01M6YB9CB) [AliExpress](https://www.aliexpress.us/item/3256805092198563.html)
     * I like to label my wires with a label maker and cover it with clear heat shrink tubing.
