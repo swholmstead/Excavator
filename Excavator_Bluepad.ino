@@ -25,8 +25,8 @@ ControllerPtr myController;
 #define clawMotor1   12 // Controls claw rotation movement
 
 #define deadZone 30
-#define clawInitialPosition 60
-#define clawMin 35
+#define clawInitialPosition 45
+#define clawMin 30
 #define clawMax 115
 #define clawSpeed 3         // degrees to move each cycle
 #define clawSwivelSpeed 196 // out of 255 - percentage of maximum motor speed

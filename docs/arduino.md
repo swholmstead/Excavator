@@ -15,7 +15,7 @@ Under Tools > Board, select esp32_bluepad32 > ESP 32 Dev Module
 Connect ESP32 Development Kit with USB cable
 Under Tools > Port, select COM port used
 
-Open MiniSkidi_Bluepad_2.0.ino file and click right arrow on top tool bar to download code to ESP32
+Open Excavator_Bluepad.ino file and click right arrow on top tool bar to download code to ESP32
 
 <h2>Controls</h2>
 
