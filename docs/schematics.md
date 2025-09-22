@@ -31,7 +31,7 @@ Assembly the 5V buck converter. Ensure that the 5V jumper has solder and you use
 
 Assembly the PCB, batteries, fuse, and 5V buck converter.  Turn on power and ensure buck converter is generating +5V.
 When the slide switch is towards to left of the board (closest to the DRV8833 sockets), it is in the ON position.
-There are labeled test points on the servo pins on the back of the board that you can use to test for +5V.
+There are labeled test points on the servo pins that you can use to test for +5V.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3689.JPEG" alt="Buck Converter" width=600>
 
