@@ -165,9 +165,8 @@ Solder original 21g servo wires to slip ring wires and cover with heat shrink tu
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3748.JPEG" alt="Claw" width=600>
 
-Attach the claw assembly to the Claw Attach with M2.6 x 6mm screws.  
-Pull on the 21g servo wires until the wires are hidden within the Boom.
-Connect Claw servo to circuit board with yellow wire closest to the power switch.
+Attach the claw assembly to the Claw Attach with M2.6 x 6mm screws.  Pull on the 21g servo wires until the
+wires are hidden within the Boom. Connect Claw servo to circuit board with yellow wire closest to the power switch.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3747.JPEG" alt="Claw" width=600>
 
