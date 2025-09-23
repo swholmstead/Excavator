@@ -1,7 +1,5 @@
 <h2>Assembly Instructions</h2>
 
-<b>WARNING: I am still working on assembly instructions...</b>
-
 <h3>Lower Body</h3>
 
 Push N20 100 rpm motors into Wheel Motors.
@@ -96,12 +94,21 @@ is in the center of shaft.
 
 Insert N20 100rpm motor into each Swivel Motor and secure with Swivel Motor Lock.  Hand screw together shafts and swivel.
 
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3749.JPEG" alt="Motor Shaft" width=600>
+
 Solder motor wires to motors. Leave bucket motor wire for now.
 
 Attach dipper motor and bucket motor with M2.6 x 6 mm screws.  Ensure that screws are not too tight that they bind
 the motor.  I like to cut off the tip of the screw to remove the point that can cause binding of the N20 motor.
 
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3750.JPEG" alt="Motor Shaft" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3752.JPEG" alt="Motor Shaft" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3753.JPEG" alt="Motor Shaft" width=600>
+
 Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6 mm screw.  Attach boom motor to cab base and boom arm.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3754.JPEG" alt="Motor Shaft" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3755.JPEG" alt="Motor Shaft" width=600>
 
 <h3>Bucket (Option 1)</h3>
 
@@ -178,12 +185,18 @@ Route LED with LED holder through Cab.  Connect both wires to a JST-XH connector
 
 Click Cab into lower body and plug lights into circuit board.
 
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3758.JPEG" alt="Motor Shaft" width=600>
+
 Attach Step to lower body with M2.6 x 6 mm screw.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3757.JPEG" alt="Motor Shaft" width=600>
 
 Attach Swivel to lower body with M2.6 x 6 mm screws.  Attach Top Cover to Swivel with M2.6 x 6 mm screws.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Cab and Top Cover" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3756.JPEG" alt="Cab and Top Cover" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3759.JPEG" alt="Cab and Top Cover" width=600>
 
 Attach Exhaust Pipe to Engine Cover with M2.6 x 6 mm screw.  Click Engine Cover onto Top Cover.
 
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Completed" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3760.JPEG" alt="Completed" width=600>
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3761.JPEG" alt="Completed" width=600>
