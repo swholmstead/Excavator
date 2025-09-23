@@ -226,7 +226,7 @@ void processBucket(int newValue) {
   }
 }
 
-void processClaw(int newValue, int swivel_right, int swivel_left, bool claw_open, bool claw_close) {
+void processClaw(int newValue, int swivel_right, int swivel_left, bool claw_close, bool claw_open) {
   if (newValue & DPAD_UP || claw_open) {
     if (clawValue > clawMin) {
       clawValue -= clawSpeed;
