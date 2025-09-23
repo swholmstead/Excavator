@@ -8,13 +8,13 @@ Push N20 100 rpm motors into Wheel Motors.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3700.JPEG" alt="Wheel Motor" width=600>
 
-Insert Wheel Motor assembly into Track Support Left. Secure with Motor Lock Left and a M2.6 x 6mm screw.  I like to make sure
+Insert Wheel Motor assembly into Track Support Left. Secure with Motor Lock Left and a M2.6 x 6 mm screw.  I like to make sure
 positive (+) end of battery is on top.  It makes it easier for soldering later.
 
-Insert Wheel Idler on other end of Track Support Left and secure with M2.6 x 8mm screws.  Make sure screws are loose enough
+Insert Wheel Idler on other end of Track Support Left and secure with M2.6 x 8 mm screws.  Make sure screws are loose enough
 for idler wheel to rotate freely.
 
-Insert 2 Track Roller Uppers and 2 Track Roller Lowers onto Track Support Left and secure with M2.6 x 6mm screws.  Make sure
+Insert 2 Track Roller Uppers and 2 Track Roller Lowers onto Track Support Left and secure with M2.6 x 6 mm screws.  Make sure
 that all rollers can rotate freely.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3701.JPEG" alt="Track Support" width=600>
@@ -23,17 +23,17 @@ Repeat same steps for Track Support Right.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3703.JPEG" alt="Track Support" width=600>
 
-Attach Lower Frame between left and right track supports and secure with M2.6 x 8mm screws.  Ensure that the wire channel faces towards
+Attach Lower Frame between left and right track supports and secure with M2.6 x 8 mm screws.  Ensure that the wire channel faces towards
 the rear with the N20 100 rpm motors.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3704.JPEG" alt="Lower Frame" width=600>
 
-Insert the 12.5mm slip ring into the Slip Ring Lock.  
+Insert the 12.5 mm slip ring into the Slip Ring Lock.  
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3705.JPEG" alt="Slip Ring" width=600>
 
 Assemble the Track Support and Lower Body.  Push the wires of the slip ring through from the bottom and secure the
-slip ring with M2.6 x 8mm screws. Make sure the lower cab can freely rotate from the track support assembly.
+slip ring with M2.6 x 8 mm screws. Make sure the lower cab can freely rotate from the track support assembly.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3706.JPEG" alt="Slip Ring" width=600>
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3707.JPEG" alt="Slip Ring" width=600>
@@ -47,15 +47,15 @@ Push N20 100 rpm motor into Main Boom Holder and press Pinion Gear on other side
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3709.JPEG" alt="Slip Ring" width=600>
 
-Attach Main Boom Holder to base with M2.6 x 8mm screws.  Attach JST-XH connector to 8cm of wire and solder to
+Attach Main Boom Holder to base with M2.6 x 8 mm screws.  Attach JST-XH connector to 8 cm of wire and solder to
 swing motor.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3713.JPEG" alt="Slip Ring" width=600>
 
-Attach circuit board to lower body with M2.6 x 6mm screws.  Add JST-XH connectors for left/right track motors
+Attach circuit board to lower body with M2.6 x 6 mm screws.  Add JST-XH connectors for left/right track motors
 from swivel ring and attach to circuit board.  Attach swivel motor to circuit board. 
 
-Attach seat to lower body with M2.6 x 6mm screw.
+Attach seat to lower body with M2.6 x 6 mm screw.
 
 Install TPU tracks.
 
@@ -67,18 +67,18 @@ Then you will be able to operate swivel (and boom when finally connected).
 
 <h3>Boom and Dipper Arms</h3>
 
-Attach boom to dipper with M2.6 x 6mm screws.
+Attach boom to dipper with M2.6 x 6 mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3731.JPEG" alt="Boom Arm" width=600>
 
-Attach Bucket Swing Arm and Bucket Push Link to dipper with M2.6 x 6mm screws.
+Attach Bucket Swing Arm and Bucket Push Link to dipper with M2.6 x 6 mm screws.
 
 Attach JST-XH connectors to the following length of wires:
 
-* Boom - 10cm
-* Dipper - 10cm
-* Bucket - 15cm
-* Claw - 20cm (<b>Optional</b> - only if doing the Claw option)
+* Boom - 10 cm
+* Dipper - 10 cm
+* Bucket - 15 cm
+* Claw - 20 cm (<b>Optional</b> - only if doing the Claw option)
 
 I like to label my wires.  I use a label maker and then cover it with transparent Heat Shrink Tubing.
 
@@ -98,14 +98,14 @@ Insert N20 100rpm motor into each Swivel Motor and secure with Swivel Motor Lock
 
 Solder motor wires to motors. Leave bucket motor wire for now.
 
-Attach dipper motor and bucket motor with M2.6 x 6mm screws.  Ensure that screws are not too tight that they bind
+Attach dipper motor and bucket motor with M2.6 x 6 mm screws.  Ensure that screws are not too tight that they bind
 the motor.  I like to cut off the tip of the screw to remove the point that can cause binding of the N20 motor.
 
-Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6mm screw.  Attach boom motor to cab base and boom arm.
+Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6 mm screw.  Attach boom motor to cab base and boom arm.
 
 <h3>Bucket (Option 1)</h3>
 
-Attach Bucket to Bucket Swing Arm and Bucket Push Link with M2.6 x 6mm and M2.6 x 8mm screws.
+Attach Bucket to Bucket Swing Arm and Bucket Push Link with M2.6 x 6 mm and M2.6 x 8 mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3734.JPEG" alt="Bucket" width=600>
 
@@ -116,11 +116,11 @@ Insert Claw Gear into Gear Retention with small end of Claw Gear facing inwards.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3720.JPEG" alt="Claw Gear" width=600>
 
-Turn over and attach Claw Servo Holder with M2.6 x 6mm screws.  Ensure that gear retention ring can still rotate freely.
+Turn over and attach Claw Servo Holder with M2.6 x 6 mm screws.  Ensure that gear retention ring can still rotate freely.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3721.JPEG" alt="Claw Base" width=600>
 
-Shorten wires on ONE SIDE of 6mm or 6.5mm slip to 5cm long.  I like to shorten the side where the wires are on
+Shorten wires on ONE SIDE of 6 mm or 6.5 mm slip to 5 cm long.  I like to shorten the side where the wires are on
 the outside of the slip ring.  We only need 3 wires.  I like to use the Black, Red, and Yellow wires, since they
 are the closest match to the wires on the 21g Servo.  Carefully clip off extra wires so they are not in the way.  
 
@@ -143,16 +143,16 @@ Replace the cover and 4 screws on the 21g servo.  Attach the single blade and sc
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3741.JPEG" alt="Servo" width=600>
 
-Position the slip ring in the center hole and attach the 21g Servo to the Claw Servo Holder with M2.6 x 8mm screws.
+Position the slip ring in the center hole and attach the 21g Servo to the Claw Servo Holder with M2.6 x 8 mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3742.JPEG" alt="Claw" width=600>
 
-Attach the Claw Push Link to the Claw Arm Left with M2.6 x 6mm screw.  Attach both left and right Claw Arms to the
-Claw assembly with M2.6 x 6mm screws.
+Attach the Claw Push Link to the Claw Arm Left with M2.6 x 6 mm screw.  Attach both left and right Claw Arms to the
+Claw assembly with M2.6 x 6 mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3743.JPEG" alt="Claw" width=600>
 
-Connect the Claw Attach to the Bucket Swing Arm and Bucket Push Link with M2.6 x 8mm screws.
+Connect the Claw Attach to the Bucket Swing Arm and Bucket Push Link with M2.6 x 8 mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3744.JPEG" alt="Claw" width=600>
 
@@ -165,7 +165,7 @@ Solder original 21g servo wires to slip ring wires and cover with heat shrink tu
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3748.JPEG" alt="Claw" width=600>
 
-Attach the claw assembly to the Claw Attach with M2.6 x 6mm screws.  Pull on the 21g servo wires until the
+Attach the claw assembly to the Claw Attach with M2.6 x 6 mm screws.  Pull on the 21g servo wires until the
 wires are hidden within the Boom. Connect Claw servo to circuit board with yellow wire closest to the power switch.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3747.JPEG" alt="Claw" width=600>
@@ -178,12 +178,12 @@ Route LED with LED holder through Cab.  Connect both wires to a JST-XH connector
 
 Click Cab into lower body and plug lights into circuit board.
 
-Attach Step to lower body with M2.6 x 6mm screw.
+Attach Step to lower body with M2.6 x 6 mm screw.
 
-Attach Swivel to lower body with M2.6 x 6mm screws.  Attach Top Cover to Swivel with M2.6 x 6mm screws.
+Attach Swivel to lower body with M2.6 x 6 mm screws.  Attach Top Cover to Swivel with M2.6 x 6 mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Cab and Top Cover" width=600>
 
-Attach Exhaust Pipe to Engine Cover with M2.6 x 6mm screw.  Click Engine Cover onto Top Cover.
+Attach Exhaust Pipe to Engine Cover with M2.6 x 6 mm screw.  Click Engine Cover onto Top Cover.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_37xx.JPEG" alt="Completed" width=600>
