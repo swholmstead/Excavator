@@ -183,13 +183,13 @@ Route LED with LED holder through Cab.  Connect both wires to a JST-XH connector
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3717.JPEG" alt="Slip Ring" width=600>
 
-Click Cab into lower body and plug lights into circuit board.
-
-<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3758.JPEG" alt="Motor Shaft" width=600>
-
 Attach Step to lower body with M2.6 x 6 mm screw.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3757.JPEG" alt="Motor Shaft" width=600>
+
+Click Cab into lower body and plug lights into circuit board.
+
+<img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3758.JPEG" alt="Motor Shaft" width=600>
 
 Attach Swivel to lower body with M2.6 x 6 mm screws.  Attach Top Cover to Swivel with M2.6 x 6 mm screws.
 
