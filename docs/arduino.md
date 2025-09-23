@@ -37,4 +37,4 @@ There are 2 modes. To switch between these modes, just click in the left joystic
 * DPAD left/right or left/right trigger controls rotation of the claw.
 * "A" button controls lights on/off.
 * "B" button executes "wiggle" function to move motors and flash lights.  If you have more than 1 vehicle,
-this makes it easy to identify whichone is paired with this controller.
+this makes it easy to identify which one is paired with this controller.
