@@ -179,7 +179,8 @@ wires are hidden within the Boom. Connect Claw servo to circuit board with yello
 
 <h3>Cab Main Body</h3>
 
-Attach Step to lower body with M2.6 x 6 mm screw.
+Attach Step to lower body with M2.6 x 6 mm screw.  You may have to rotate the cab in order to get access to the
+screw underneath the step.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3757.JPEG" alt="Motor Shaft" width=600>
 
@@ -191,7 +192,7 @@ Click Cab into lower body and plug lights into circuit board.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3758.JPEG" alt="Motor Shaft" width=600>
 
-Attach Swivel to lower body with M2.6 x 6 mm screws.  Attach Top Cover to Swivel with M2.6 x 6 mm screws.
+Attach Swivel to lower body with M2.6 x 6 mm screws.  Attach Top Cover to Swivel with M2.6 x 8 mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3756.JPEG" alt="Cab and Top Cover" width=600>
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3759.JPEG" alt="Cab and Top Cover" width=600>
