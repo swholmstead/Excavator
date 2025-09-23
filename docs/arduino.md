@@ -34,7 +34,7 @@ There are 2 modes. To switch between these modes, just click in the left joystic
 * Left joystick y-axis controls raising/lowering boom arm and x-axis controls cab swivel.
 * Right joystick y-axis controls raising/lowering dipper arm and x-axis control bucket tilt.
 * DPAD up/down or left/right bumper controls opening/closing claw
-* DPADleft/right or left/right trigger controls rotation of the claw.
+* DPAD left/right or left/right trigger controls rotation of the claw.
 * "A" button controls lights on/off.
-* "B" button executes "wiggle" function to move motors and flash lights (if you have more than 1 vehicle, this makes it easy to identify which
-one is paired with this controller.
+* "B" button executes "wiggle" function to move motors and flash lights.  If you have more than 1 vehicle,
+this makes it easy to identify whichone is paired with this controller.
