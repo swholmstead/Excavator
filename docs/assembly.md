@@ -69,8 +69,6 @@ Attach boom to dipper with M2.6 x 6 mm screws.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3731.JPEG" alt="Boom Arm" width=600>
 
-Attach Bucket Swing Arm and Bucket Push Link to dipper with M2.6 x 6 mm screws.
-
 Attach JST-XH connectors to the following length of wires:
 
 * Boom - 10 cm
@@ -98,6 +96,8 @@ Insert N20 100rpm motor into each Swivel Motor and secure with Swivel Motor Lock
 
 Solder motor wires to motors. Leave bucket motor wire for now.
 
+Attach Bucket Swing Arm and Bucket Push Link to dipper with M2.6 x 6 mm screws.
+
 Attach dipper motor and bucket motor with M2.6 x 6 mm screws.  Ensure that screws are not too tight that they bind
 the motor.  I like to cut off the tip of the screw to remove the point that can cause binding of the N20 motor.
 
@@ -105,7 +105,7 @@ the motor.  I like to cut off the tip of the screw to remove the point that can 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3752.JPEG" alt="Motor Shaft" width=600>
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3753.JPEG" alt="Motor Shaft" width=600>
 
-Attach boom/dipper arm to cab base with Motor Swivel and M2.6 x 6 mm screw.  Attach boom motor to cab base and boom arm.
+Attach boom to cab base with Motor Swivel and M2.6 x 6 mm screw.  Attach boom motor to cab base and boom arm.
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3754.JPEG" alt="Motor Shaft" width=600>
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3755.JPEG" alt="Motor Shaft" width=600>
@@ -127,7 +127,7 @@ Turn over and attach Claw Servo Holder with M2.6 x 6 mm screws.  Ensure that gea
 
 <img src="https://github.com/swholmstead/Excavator/blob/main/pictures/IMG_3721.JPEG" alt="Claw Base" width=600>
 
-Shorten wires on ONE SIDE of 6 mm or 6.5 mm slip to 5 cm long.  I like to shorten the side where the wires are on
+Shorten wires on ONE SIDE of 6 mm or 6.5 mm slip ring to 5 cm long.  I like to shorten the side where the wires are on
 the outside of the slip ring.  We only need 3 wires.  I like to use the Black, Red, and Yellow wires, since they
 are the closest match to the wires on the 21g Servo.  Carefully clip off extra wires so they are not in the way.  
 
