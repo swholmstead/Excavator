@@ -13,12 +13,12 @@ ControllerPtr myController;
 
 #define lightsAttach  5 // Controls headlight control
 
-#define boomMotor0   19 // Controls boom movement
-#define boomMotor1   32 // Controls boom movement
+#define boomMotor0   32 // Controls boom movement
+#define boomMotor1   19 // Controls boom movement
 #define dipperMotor0 21 // Controls dipper movement
 #define dipperMotor1 22 // Controls dipper movement
-#define bucketMotor0 18 // Controls bucket movement
-#define bucketMotor1 33 // Controls bucket movement
+#define bucketMotor0 33 // Controls bucket movement
+#define bucketMotor1 18 // Controls bucket movement
 
 #define clawServoPin 23 // Controls claw servo
 #define clawMotor0   16 // Controls claw rotation movement
